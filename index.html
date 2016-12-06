@@ -10,25 +10,33 @@
     <link rel="stylesheet" type="text/css" href="style.css"> </head>
 
 <body>
-<!--Nav-->
-<nav class="section--navigation">
-    <ul class="navigation nav__utility">
-        <li class="nav__item"><a href=""><span class="glyphicon glyphicon-envelope"></span> EMAIL</a></li>
-        <li class="nav__item"><a href=""><span class="glyphicon glyphicon-earphone"></span> 123-456-7890</a></li>
-    </ul>
-    <ul class="navigation nav__main">
-        <li class="nav__item"><img class="nav__item__img" src="assets/sample_logo.png" alt="logo"></li>
-        <li class="nav__item">
-            <ul class="navigation">
-                <li class="nav__item">About</li>
-                <li class="nav__item">Service1</li>
-                <li class="nav__item">Service2</li>
-            </ul>
-        </li>
-    </ul>
-</nav>
+    <!--Nav-->
+    <nav class="section--navigation">
+        <ul class="navigation nav__utility">
+            <div class="container">
+                <div class="row">
+                    <li class="nav__item"><a href=""><span class="glyphicon glyphicon-envelope"></span> EMAIL</a></li>
+                    <li class="nav__item"><a href=""><span class="glyphicon glyphicon-earphone"></span> 123-456-7890</a></li>
+                </div>
+            </div>
+        </ul>
+        <ul class="navigation nav__main">
+            <div class="container">
+                <div class="row">
+                    <li class="nav__item nav__item--left"><img class="nav__item__img" src="assets/sample_logo.png" alt="logo"></li>
+                    <li class="nav__item nav__item--right">
+                        <ul class="navigation">
+                            <li class="nav__item">About Us</li>
+                            <li class="nav__item">Service1</li>
+                            <li class="nav__item">Service2</li>
+                        </ul>
+                    </li>
+                </div>
+            </div>
+        </ul>
+    </nav>
     <!--Main Carousel-->
-        <section id="myCarousel" class="carousel slide row" data-ride="carousel">
+    <section id="myCarousel" class="carousel slide row" data-ride="carousel">
         <!--Center Img-->
         <div class="carousel-inner" role="listbox">
             <div class="item active">

@@ -1,7 +1,7 @@
+/*-------------------------Nav--------------------------------*/
 .section--navigation {
     width: 100%;
 }    
-
 .navigation {
     position: relative;
     margin: 0;
@@ -23,8 +23,8 @@
 .nav__item {
     display: inline-block;
     padding: 0.2em 1em;
+    position: relative;
 }
-
 .nav__item > a,
 .nav__item > a:link,
 .nav__item > a:hover,
@@ -32,3 +32,13 @@
     color: white;
     text-decoration: none;
 }
+.row{
+    position: relative;
+}
+.nav__item--right{
+    position: absolute;
+    right:0;
+    top:50%;
+    transform: translateY(-50%);
+}
+/*-------------------------Carousel--------------------------------*/
