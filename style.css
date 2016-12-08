@@ -1,0 +1,94 @@
+/*-------------------------Nav--------------------------------*/
+.section--navigation {
+    width: 100%;
+}    
+.navigation {
+    position: relative;
+    margin: 0;
+    list-style-type: none;
+    padding: 0 1em;
+}
+.nav__item__img{
+    height:80px;
+}
+.nav__utility {
+    background-color: black;
+    color: white;
+    text-align: right;
+}
+.nav__main {
+    background-color: transparent;
+    color: black;    
+}
+.nav__item {
+    display: inline-block;
+    padding: 0.2em 1em;
+    position: relative;
+}
+.top_nav__item--link,
+.top_nav__item--link:link,
+.top_nav__item--link:hover,
+.top_nav__item--link:visited {
+    color:white;
+    text-decoration: none;
+}
+.btm_nav__item--link,
+.btm_nav__item--link:link,
+.btm_nav__item--link:hover,
+.btm_nav__item--link:visited {
+    text-decoration: none;
+}
+
+.row{
+    position: relative;
+}
+.nav__item--right{
+    position: absolute;
+    right:0;
+    top:50%;
+    transform: translateY(-50%);
+}
+/*-------------------------Carousel--------------------------------*/
+.item{
+    position: relative;
+}
+.carouselImg{
+    position: relative;
+    width: 100%;
+    min-height: 550px;
+    background: url(assets/slider-img-3-blur.jpg) center center / cover no-repeat;
+}
+.inner_carouselImg{
+    background: url(assets/slider-img-3.jpg) center center / cover no-repeat;
+    max-width: 1600px;
+    min-height: 550px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.inner_carouselText{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin: 5% 0;
+}
+.captionText{
+    color:white;
+    font-size: 3em;
+    margin: 5% 0 2% 0;
+}
+.captionDescription{
+    color:white;
+    font-size: 1.5em;
+    font-weight: 100;
+    position: relative;
+}
+.carousel-control{
+    height: 100%;
+}
+.arrowImg{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
