@@ -15,20 +15,20 @@
         <ul class="navigation nav__utility">
             <div class="container">
                 <div class="row">
-                    <li class="nav__item"><a href=""><span class="glyphicon glyphicon-envelope"></span> EMAIL</a></li>
-                    <li class="nav__item"><a href=""><span class="glyphicon glyphicon-earphone"></span> 123-456-7890</a></li>
+                    <li class="nav__item"><a href="#" class="top_nav__item--link"><span class="glyphicon glyphicon-envelope"></span> EMAIL</a></li>
+                    <li class="nav__item"><a href="#" class="top_nav__item--link"><span class="glyphicon glyphicon-earphone"></span> 123-456-7890</a></li>
                 </div>
             </div>
         </ul>
         <ul class="navigation nav__main">
             <div class="container">
                 <div class="row">
-                    <li class="nav__item nav__item--left"><img class="nav__item__img" src="assets/sample_logo.png" alt="logo"></li>
+                    <li class="nav__item"><img class="nav__item__img" src="assets/sample_logo.png" alt="logo"></li>
                     <li class="nav__item nav__item--right">
                         <ul class="navigation">
-                            <li class="nav__item">About Us</li>
-                            <li class="nav__item">Service1</li>
-                            <li class="nav__item">Service2</li>
+                            <li class="nav__item"><a href="#" class="btm_nav__item--link">About Us</a></li>
+                            <li class="nav__item"><a href="#" class="btm_nav__item--link">Service1</a></li>
+                            <li class="nav__item"><a href="#" class="btm_nav__item--link ">Service2</a></li>
                         </ul>
                     </li>
                 </div>
@@ -36,24 +36,66 @@
         </ul>
     </nav>
     <!--Main Carousel-->
-    <section id="myCarousel" class="carousel slide row" data-ride="carousel">
-        <!--Center Img-->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+        <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img class="carouselImg" src="assets/slider-img-3.jpg" alt="img">
+                <div class="carouselImg">
+                    <div class="inner_carouselImg">
+                        <div class="inner_carouselText">
+                            <h1 class="captionText">CAPTION HEADING1</h1>
+                            <h9 class="captionDescription">Caption Description</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="item">
-                <img class="carouselImg" src="assets/slider-img-3.jpg" alt="img">
+                <div class="carouselImg">
+                    <div class="inner_carouselImg">
+                        <div class="inner_carouselText">
+                            <h1 class="captionText">CAPTION HEADING2</h1>
+                            <h9 class="captionDescription">Caption Description</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="carouselImg">
+                    <div class="inner_carouselImg">
+                        <div class="inner_carouselText">
+                            <h1 class="captionText">CAPTION HEADING3</h1>
+                            <h9 class="captionDescription">Caption Description</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="carouselImg">
+                    <div class="inner_carouselImg">
+                        <div class="inner_carouselText">
+                            <h1 class="captionText">CAPTION HEADING4</h1>
+                            <h9 class="captionDescription">Caption Description</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!--Side Bar-->
+
+        <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
             <img src="Assets/carousel-left-arrow.png" alt="left arrow" id="leftArrow" class="arrowImg">
         </a>
         <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
             <img src="Assets/carousel-right-arrow.png" alt="right arrow" id="rightArrow" class="arrowImg">
         </a>
-    </section>
+    </div>
     <!--    <section></section>-->
     <!--Info-->
     <!--    <section></section>-->
