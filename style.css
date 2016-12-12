@@ -92,3 +92,29 @@
     top: 50%;
     transform: translateY(-50%);
 }
+/*-------------------------Contact--------------------------------*/
+.section--contact{
+    background-color:darksalmon;
+}
+.text__wrapper{
+    text-align: center;
+}
+.form--div{
+    position: relative;
+    margin: 1em 0;
+}
+.form--div__submit{
+    text-align: center;
+}
+form--div--textarea{
+    margin: 0;
+}
+.contact__content__wrapper{
+    margin: 1em 0;
+}
+.contact__content{
+    width:100%;
+}
+.submit--wrapper{
+    text-align: center;   
+}
