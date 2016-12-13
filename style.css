@@ -1,5 +1,7 @@
 /*-------------------------Nav--------------------------------*/
-
+*{
+    font-family: montserrat;
+}
 .section--navigation {
     width: 100%;
 }
@@ -113,10 +115,11 @@
 }
 /*-------------------------Contact--------------------------------*/
 .section--contact{
-    background-color:darksalmon;
+    background-color:#5D8F66;
 }
 .text__wrapper{
     text-align: center;
+    color:white;    
 }
 .form--div{
     position: relative;
@@ -130,9 +133,27 @@
 }
 .contact__content{
     width:100%;
+    padding: 1em;
+    background-color: #487751;
+    border: none;
+    color:white;
 }
 .submit--wrapper{
     text-align: center;   
+}
+.contact__text .contact__header__text{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.submit{
+    background-color: #5D8F66;
+    padding: 2vw    ;
+    border: 1px solid white;
+    border-radius: 15px;
+    color:white;
+}
+.contact__content::-webkit-input-placeholder{ /* Chrome/Opera/Safari */
+  color: white;
 }
 
 
