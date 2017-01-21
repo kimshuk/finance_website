@@ -3,6 +3,7 @@ $(document).ready(function(){
 });
 function createSecondFormPage(okayToProceed){
     if(okayToProceed){
+        //forms needed for second page?
         
     }else{
         
