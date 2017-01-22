@@ -2,8 +2,18 @@
 *{
     font-family: montserrat;
 }
+.navigation.nav__utility {
+    background-color: black;
+    color: white;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
 .section--navigation {
     width: 100%;
+    padding-top: 26px;
 }
 
 .navigation {
@@ -15,12 +25,6 @@
 
 .nav__item__img {
     height: 80px;
-}
-
-.nav__utility {
-    background-color: black;
-    color: white;
-    text-align: right;
 }
 
 .nav__main {
@@ -59,6 +63,8 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
+
 
 
 /*-------------------------Carousel--------------------------------*/
@@ -114,6 +120,7 @@
     transform: translateY(-50%);
 }
 /*-------------------------Contact--------------------------------*/
+
 .section--contact{
     background-color:#5D8F66;
 }
@@ -121,37 +128,28 @@
     text-align: center;
     color:white;    
 }
+.statusBar{
+    display: flex;
+    margin-top: 1em;
+}
+.statusBar .step{
+    width:50%;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.statusBar .filled{
+    width:50%;
+    border: 1px solid #337ab7;
+    border-radius: 5px;
+    background-color: #2e6da4;
+}
 .form--div{
-    position: relative;
     margin: 1em 0;
-}
-.form--div__submit{
-    text-align: center;
-}
-.contact__content{
-    width:100%;
-    padding: 1em;
-    background-color: #487751;
-    border: none;
-    color:white;
 }
 .submit--wrapper{
     text-align: center;   
 }
-.contact__text .contact__header__text{
-    font-size: 1.2em;
-    font-weight: bold;
-}
-.submit{
-    background-color: #5D8F66;
-    padding: 2vw    ;
-    border: 1px solid white;
-    border-radius: 15px;
-    color:white;
-}
-.contact__content::-webkit-input-placeholder{ /* Chrome/Opera/Safari */
-  color: white;
-}
+
 
 
 /*----------------------------info---------------------------------*/
@@ -283,5 +281,10 @@ a:hover {
     text-decoration: none;
 }
 
-/*----------------------------Google Form-------------------------------*/
+/*----------------------------Company Info-------------------------------*/
+.section_company .company_info_wrapper{
+    background-color: #ffe8a6;    
+    text-align: center;
+}
+
 

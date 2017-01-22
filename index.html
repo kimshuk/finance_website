@@ -8,20 +8,21 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css"> </head>
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 <body>
     <!--Nav--Asset-->
-    <nav class="section--navigation">
-        <ul class="navigation nav__utility">
-            <div class="container">
-                <div class="row">
-                    <li class="nav__item"><a href="#" class="top_nav__item--link"><span class="glyphicon glyphicon-envelope"></span> EMAIL</a></li>
-                    <li class="nav__item"><a href="#" class="top_nav__item--link"><span class="glyphicon glyphicon-earphone"></span> 123-456-7890</a></li>
-                </div>
+    <ul class="navigation nav__utility">
+        <div class="container">
+            <div class="row">
+                <li class="nav__item"><a href="#" class="top_nav__item--link"><span class="glyphicon glyphicon-envelope"></span> EMAIL</a></li>
+                <li class="nav__item"><a href="#" class="top_nav__item--link"><span class="glyphicon glyphicon-earphone"></span> 123-456-7890</a></li>
             </div>
-        </ul>
+        </div>
+    </ul>
+    <nav class="section--navigation">
         <ul class="navigation nav__main">
             <div class="container">
                 <div class="row">
@@ -89,7 +90,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
             <img src="assets/carousel-left-arrow.png" alt="left arrow" id="leftArrow" class="arrowImg">
@@ -98,7 +98,42 @@
             <img src="assets/carousel-right-arrow.png" alt="right arrow" id="rightArrow" class="arrowImg">
         </a>
     </div>
-    <section>
+    <!--Company Info-->
+    <section class="section_company">
+        <div class="company_info_wrapper">
+            <div class="container">
+                <div class="row box">
+                    <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                        <h1 class="info_title">Info Title</h1>
+                        <p class="info_details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque debitis dolor harum. Velit et, rerum!</p>
+                    </div>
+                </div>
+                <div class="row box">
+                    <div class="col-xs-12 cards">
+                        <div class="cards_wrapper">
+                            <div class="cards_content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <div class="cards_rate">
+                                    <p class="rate_num">2.345% <span class="rate_text">RATE</span></p>
+                                </div>
+                                <div class="cards_apr margin_top">
+                                    <p class="apr_num">1.234% <span class="apr_text">APR</span></p>
+                                </div>
+                                <div class="btn btn-success cards_btn margin_top">Apply</div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="row box">
+                    <div class="col-md-8 col-md-offset-2">
+                        <p class="padding_top_xl padding_bottom_xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, tempora.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Product Info-->
+    <section class="section_product">
         <div class="info_wrapper">
             <div class="container">
                 <div class="row box">
@@ -108,7 +143,7 @@
                     </div>
                 </div>
                 <div class="row box">
-                    <div class="col-md-3 col-xs-6 cards">
+                    <div class="col-xs-6 cards">
                         <a href="#">
                             <div class="cards_wrapper">
                                 <div class="cards_header" data-legend="FIXED">
@@ -128,47 +163,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-3 col-xs-6 cards">
-                        <a href="#">
-                            <div class="cards_wrapper">
-                                <div class="cards_header" data-legend="FIXED">
-                                    <h1 class="cards_num">30</h1>
-                                    <h1 class="cards_year">YEAR</h1>
-                                </div>
-                                <div class="cards_content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <div class="cards_rate">
-                                        <p class="rate_num">2.345% <span class="rate_text">RATE</span></p>
-                                    </div>
-                                    <div class="cards_apr margin_top">
-                                        <p class="apr_num">1.234% <span class="apr_text">APR</span></p>
-                                    </div>
-                                    <div class="btn btn-success cards_btn margin_top">Apply</div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-xs-6 cards">
-                        <a href="#">
-                            <div class="cards_wrapper">
-                                <div class="cards_header" data-legend="FIXED">
-                                    <h1 class="cards_num">30</h1>
-                                    <h1 class="cards_year">YEAR</h1>
-                                </div>
-                                <div class="cards_content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <div class="cards_rate">
-                                        <p class="rate_num">2.345% <span class="rate_text">RATE</span></p>
-                                    </div>
-                                    <div class="cards_apr margin_top">
-                                        <p class="apr_num">1.234% <span class="apr_text">APR</span></p>
-                                    </div>
-                                    <div class="btn btn-success cards_btn margin_top">Apply</div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-xs-6 cards">
+                    <div class="col-xs-6 cards">
                         <a href="#">
                             <div class="cards_wrapper">
                                 <div class="cards_header" data-legend="FIXED">
@@ -197,44 +192,54 @@
             </div>
         </div>
     </section>
+    <!--Contact-->
     <section class="section--contact">
-    <div class="container contact__info__wrapper">
-        <div class="text__wrapper row">
-            <div class="col-md-8 col-md-offset-2">
-                <h1 class="contact__header__text">Get in Touch</h1>
-                <p class="contact__text">Lorem ipsum dol 1-800-554-4588 or sit amet, consectetur adipisicing elit.</p>
-            </div>               
+        <div class="container contact__info__wrapper">
+            <div class="text__wrapper row statusBar">
+                <div class="col-md-8 col-md-offset-2 statusBar">
+                    <div class="step" id="step1">Step1</div>
+                    <div class="step" id="step2">step2</div>
+                </div>
+            </div>
+            <div class="text__wrapper row contactHeader">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="contact__header__text">Contact Us Today!</h1>
+                    <p class="contact__text">Lorem ipsum dol 1-800-554-4588 or sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="form__wrapper row contactForm">
+                <form action="#" id="inputSet" class="reqForms form-group">
+                    <div class="col-xs-12 form--div">
+                        <div class="col-md-3">
+                            <input class="form-control" id="fName" type="text" name="name" placeholder="FIRST NAME" class="contact__content">
+                        </div>
+                        <div class="col-md-3">
+                            <input class="form-control" id="fName" type="text" name="name" placeholder="LAST NAME" class="contact__content">
+                        </div>
+                        <div class="col-md-6">
+                            <input class="form-control" id="businessName" type="text" name="businessName" placeholder="BUSINESS NAME" class="contact__content">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form--div">
+                        <div class="col-md-6">
+                            <input class="form-control" id="email" type="text" name="email" placeholder="EMAIL" class="contact__content">
+                        </div>
+                        <div class="col-md-6">
+                            <input class="form-control" id="phone" type="text" name="phone_number" placeholder="PHONE NUMBER" class="contact__content">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form--div enterDiv">
+                        <div class="col-xs-4 col-xs-offset-4 submit--wrapper">
+                            <button type="button" class="enter btn btn-lg btn-primary">NEXT</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
         </div>
-        <div class="form__wrapper row">
-            <form action="#" id="firstInputSet" class="reqForms">
-                <div class="col-xs-12 form--div">
-                    <div class="col-md-5 col-md-offset-1 contact__content__wrapper">
-                        <input id="fName" type="text" name="name" placeholder="FIRST NAME" class="contact__content">
-                    </div>
-                    <div class="col-md-5 contact__content__wrapper">
-                        <input id="lName" type="text" name="name" placeholder="LAST NAME" class="contact__content">
-                    </div>    
-                </div>
-                <div class="col-xs-12 form--div">
-                    <div class="col-md-5 col-md-offset-1 contact__content__wrapper">
-                        <input id="email" type="text" name="email" placeholder="EMAIL" class="contact__content">
-                    </div>
-                    <div class="col-md-5 contact__content__wrapper">
-                        <input id="phone" type="text" name="phone_number" placeholder="PHONE NUMBER" class="contact__content">
-                    </div>
-                </div>
-                <div class="col-xs-12 form--div">
-                    <div class="col-xs-4 col-xs-offset-4 submit--wrapper">
-                       <button type="button" class="enter btn btn-lg btn-primary">NEXT</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
+    </section>
     <!--footer-->
     <!--    <footer></footer>-->
-    <!--<iframe id="iFrame1" src="https://docs.google.com/forms/d/e/1FAIpQLScpKsQzCYimd8ICduDmnmTY1hwacbFP3HmOKKzpOedTSwEb1A/viewform?embedded=true" width="992" height="804" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>-->
 </body>
 
 </html>
