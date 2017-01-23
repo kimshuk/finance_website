@@ -147,7 +147,15 @@
 .submit--wrapper{
     text-align: center;   
 }
-
+.confirmationPage{
+/*    margin: 3em;*/
+}
+.confirmationPage h4{
+    text-align: center;
+}
+.confirmationPage__wrapper{
+    margin: 3em;
+}
 
 
 /*----------------------------info---------------------------------*/

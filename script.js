@@ -1,6 +1,11 @@
 $(document).ready(function(){
     applyClickHandler($('.form__wrapper'),'.enter',createSecondFormPage);
 });
+function applyClickHandler(parentElement,childClassName,functionToPerform){
+    parentElement.on("click",childClassName,function(){
+        functionToPerform();
+    })
+}
 function createSecondFormPage(){
     var timeInBizSelect = $('<select id="timeInBiz" class="form-control" form="inputSet">'),
         timeInBizOption0 = $('<option value="" disabled selected>TIME IN BUSINESS</option>'), 
@@ -22,11 +27,11 @@ function createSecondFormPage(){
         desiredAmtOption6 = $('<option value="Unknown">').text('Not Sure Yet'),
         desiredAmt = desiredAmtSelect.append(desiredAmtOption0).append(desiredAmtOption1).append(desiredAmtOption2).append(desiredAmtOption3).append(desiredAmtOption4).append(desiredAmtOption5).append(desiredAmtOption6);
     
-    var annualSales = $('<input id="annualSales" class="form-control contact__content" type="text" placeholder="ANNUAL GROSS SALES">');
-    var bizAddress = $('<input id="address" class="form-control contact__content" type="text" placeholder="BUSINESS ADDRESS">');
-    var city = $('<input id="city" class="form-control contact__content" type="text" placeholder="CITY">');
-    var state = $('<input id="state" class="form-control contact__content" type="text" placeholder="STATE">');
-    var zipCode =$('<input id="zip" class="form-control contact__content" type="text" placeholder="ZIP" pattern="[0-9]*" maxlength="5" required name="zip">');
+    var annualSales = $('<input id="annualSales" class="form-control" type="text" placeholder="ANNUAL GROSS SALES">');
+    var bizAddress = $('<input id="address" class="form-control" type="text" placeholder="BUSINESS ADDRESS">');
+    var city = $('<input id="city" class="form-control" type="text" placeholder="CITY">');
+    var state = $('<input id="state" class="form-control" type="text" placeholder="STATE">');
+    var zipCode =$('<input id="zip" class="form-control" type="text" placeholder="ZIP" pattern="[0-9]*" maxlength="5" required name="zip">');
     
     $('.enterDiv').before($('<div class="col-xs-12 form--div">')
                           .append($('<div class="col-md-3">').append(timeInBiz))
@@ -38,21 +43,57 @@ function createSecondFormPage(){
                           .append($('<div class="col-md-3">').append(city))
                           .append($('<div class="col-md-3">').append(state))
                           .append($('<div class="col-md-3">').append(zipCode))
-                          );    
+                          );   
+    
     $('#step2').addClass('filled');
     $('.enter').text('SUBMIT').addClass('submit').removeClass('enter');
-    applyClickHandler($('.form__wrapper'),'.submit',createContactFormReceivedPage);
+    $('#fName').attr('disabled','disabled');
+    $('#lName').attr('disabled','disabled');
+    $('#bizName').attr('disabled','disabled');
+    $('#email').attr('disabled','disabled');
+    $('#phone').attr('disabled','disabled');
+//    collectFormData1(); 
+    var emptyFormList = validateEmptyText('fName','lName','bizName','email','phone');
+    if(emptyFormList){
+        console.log(emptyFormList);
+        //some forms are empty
+        //need to indicate the form to turn red
+    }else{
+        applyClickHandler($('.form__wrapper'),'.submit',createContactFormReceivedPage);    
+    }
+}
+function createRequiredFormWarning(){
+    
 }
 function createContactFormReceivedPage(){
     $('.reqForms').remove();
     $('#complete').addClass('filled');
+    var confirmationPage = $('<div>').addClass('contactConfirmation col-xs-12').text('Thank you');
+    $('.form__wrapper').append(confirmationPage);   
+}
+
+function validateEmptyText(id){
+    var emptyInputList = [];
+    var i;
+    for(i = 0; i < arguments.length; i++){
+        if($('#'+arguments[i]).val() == null || $('#'+arguments[i]).val() == ""){
+            emptyInputList.push(arguments[i]);
+        }
+    }
+    if(emptyInputList.length != 0){
+        return emptyInputList;
+    }else{
+        return false;
+    }
+}
+function collectFormData1(){
+    var contactObj = new Object;
+    contactObj.firstName = $('#fName').val();
+    contactObj.lastName = $('#lName').val();
+    contactObj.bizName = $('#bizName').val();
+    contactObj.email = $('#email').val();
+    contactObj.phone = $('#phone').val();
+    console.log(contactObj);
 }
 
 
-
-function applyClickHandler(parentElement,childClassName,functionToPerform){
-    parentElement.on("click",childClassName,function(){
-//        checkFormType($('.reqForms').attr('id'));
-        functionToPerform();
-    })
-}
