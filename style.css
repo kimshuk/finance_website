@@ -4,8 +4,19 @@
     font-family: montserrat;
 }
 
+.navigation.nav__utility {
+    background-color: black;
+    color: white;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
 .section--navigation {
     width: 100%;
+    padding-top: 26px;
 }
 
 .navigation {
@@ -17,12 +28,6 @@
 
 .nav__item__img {
     height: 80px;
-}
-
-.nav__utility {
-    background-color: black;
-    color: white;
-    text-align: right;
 }
 
 .nav__main {
@@ -128,51 +133,40 @@
     color: white;
 }
 
+.statusBar {
+    /*    display: flex;*/
+    margin-top: 1em;
+}
+
+.statusBar .step {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.statusBar .filled {
+    border: 1px solid #337ab7;
+    border-radius: 5px;
+    background-color: #2e6da4;
+}
+
 .form--div {
-    position: relative;
     margin: 1em 0;
-}
-
-.form--div__submit {
-    text-align: center;
-}
-
-.contact__content__wrapper {
-    margin: 1em 0;
-}
-
-.contact__content {
-    width: 100%;
-    padding: 1em;
-    background-color: #487751;
-    border: none;
-    color: white;
 }
 
 .submit--wrapper {
     text-align: center;
 }
 
-.contact__text .contact__header__text {
-    font-size: 1.2em;
-    font-weight: bold;
+.confirmationPage {
+    /*    margin: 3em;*/
 }
 
-.submit {
-    background-color: #5D8F66;
-    padding: 0.5em 2em;
-    border: 1px solid white;
-    border-radius: 20px;
-    color: white;
+.confirmationPage h4 {
+    text-align: center;
 }
 
-.contact__content::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    color: white;
-}
-
-.contact__ques {
-    height: 120px;
+.confirmationPage__wrapper {
+    margin: 3em;
 }
 
 
@@ -303,4 +297,13 @@
 
 a:hover {
     text-decoration: none;
+}
+
+
+/*----------------------------Company Info-------------------------------*/
+
+.section_company .company_info_wrapper {
+    background-color: #f1a7a7;
+    ;
+    text-align: center;
 }
