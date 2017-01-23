@@ -1,7 +1,9 @@
 /*-------------------------Nav--------------------------------*/
-*{
+
+* {
     font-family: montserrat;
 }
+
 .section--navigation {
     width: 100%;
 }
@@ -113,47 +115,64 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
+
 /*-------------------------Contact--------------------------------*/
-.section--contact{
-    background-color:#5D8F66;
+
+.section--contact {
+    background-color: #5D8F66;
 }
-.text__wrapper{
+
+.text__wrapper {
     text-align: center;
-    color:white;    
+    color: white;
 }
-.form--div{
+
+.form--div {
     position: relative;
     margin: 1em 0;
 }
-.form--div__submit{
+
+.form--div__submit {
     text-align: center;
 }
-.contact__content__wrapper{
+
+.contact__content__wrapper {
     margin: 1em 0;
 }
-.contact__content{
-    width:100%;
+
+.contact__content {
+    width: 100%;
     padding: 1em;
     background-color: #487751;
     border: none;
-    color:white;
+    color: white;
 }
-.submit--wrapper{
-    text-align: center;   
+
+.submit--wrapper {
+    text-align: center;
 }
-.contact__text .contact__header__text{
+
+.contact__text .contact__header__text {
     font-size: 1.2em;
     font-weight: bold;
 }
-.submit{
+
+.submit {
     background-color: #5D8F66;
-    padding: 2vw    ;
+    padding: 0.5em 2em;
     border: 1px solid white;
-    border-radius: 15px;
-    color:white;
+    border-radius: 20px;
+    color: white;
 }
-.contact__content::-webkit-input-placeholder{ /* Chrome/Opera/Safari */
-  color: white;
+
+.contact__content::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: white;
+}
+
+.contact__ques {
+    height: 120px;
 }
 
 
