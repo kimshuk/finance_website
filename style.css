@@ -129,16 +129,14 @@
     color:white;    
 }
 .statusBar{
-    display: flex;
+/*    display: flex;*/
     margin-top: 1em;
 }
 .statusBar .step{
-    width:50%;
     border: 1px solid white;
     border-radius: 5px;
 }
 .statusBar .filled{
-    width:50%;
     border: 1px solid #337ab7;
     border-radius: 5px;
     background-color: #2e6da4;
@@ -283,7 +281,7 @@ a:hover {
 
 /*----------------------------Company Info-------------------------------*/
 .section_company .company_info_wrapper{
-    background-color: #ffe8a6;    
+    background-color: #f1a7a7;;    
     text-align: center;
 }
 
