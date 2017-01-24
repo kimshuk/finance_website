@@ -20,6 +20,7 @@ function checkForEmptyInput(id){
         return false;
     }
 }
+
 function clearRequiredError(id){
     var args = Array.prototype.slice.call(arguments);
     args.forEach(function(v){
@@ -36,14 +37,21 @@ function createRequiredFormWarning(emptyFormsList){
 function validateFirstInputSet(){
     clearRequiredError('fName','lName','bizName','email','phone');
     var emptyFormList = checkForEmptyInput('fName','lName','bizName','email','phone');
-    console.log(emptyFormList);
     if(emptyFormList.length == 0){
         createSecondFormPage();
     }else{
         createRequiredFormWarning(emptyFormList);
     }
 }
-
+function validateSecondInputSet(){
+    clearRequiredError('timeInBiz','desiredAmt','annualSales','bizAddress','city','state','zipCode');
+    var emptyFormList = checkForEmptyInput('timeInBiz','desiredAmt','annualSales','bizAddress','city','state','zipCode');
+    if(emptyFormList.length == 0){
+        createContactFormReceivedPage();
+    }else{
+        createRequiredFormWarning(emptyFormList);
+    }
+}
 
 
 
@@ -70,10 +78,10 @@ function createSecondFormPage() {
         desiredAmt = desiredAmtSelect.append(desiredAmtOption0).append(desiredAmtOption1).append(desiredAmtOption2).append(desiredAmtOption3).append(desiredAmtOption4).append(desiredAmtOption5).append(desiredAmtOption6);
 
     var annualSales = $('<input id="annualSales" class="form-control" type="text" placeholder="ANNUAL GROSS SALES">');
-    var bizAddress = $('<input id="address" class="form-control" type="text" placeholder="BUSINESS ADDRESS">');
+    var bizAddress = $('<input id="bizAddress" class="form-control" type="text" placeholder="BUSINESS ADDRESS">');
     var city = $('<input id="city" class="form-control" type="text" placeholder="CITY">');
     var state = $('<input id="state" class="form-control" type="text" placeholder="STATE">');
-    var zipCode = $('<input id="zip" class="form-control" type="text" placeholder="ZIP" pattern="[0-9]*" maxlength="5" required name="zip">');
+    var zipCode = $('<input id="zipCode" class="form-control" type="text" placeholder="ZIP" pattern="[0-9]*" maxlength="5" required name="zip">');
 
 
     $('.enterDiv').before($('<div class="col-xs-12 form--div">')
@@ -96,7 +104,7 @@ function createSecondFormPage() {
     $('#email').attr('disabled', 'disabled');
     $('#phone').attr('disabled', 'disabled');
 
-    applyClickHandler($('.form__wrapper'), '.submit', createContactFormReceivedPage);
+    applyClickHandler($('.form__wrapper'), '.submit', validateSecondInputSet);
 
 }
 
