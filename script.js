@@ -1,6 +1,10 @@
 $(document).ready(function(){
     applyClickHandler($('.form__wrapper'),'.enter',validateFirstInputSet);
 });
+jQuery(function($){
+    $("#phone").mask("(999) 999-9999");
+    $("#zipCode").mask("99999");
+});
 function applyClickHandler(parentElement,childClassName,functionToPerform){
     parentElement.on("click",childClassName,function(){
         functionToPerform();
@@ -47,7 +51,7 @@ function validateSecondInputSet(){
     clearRequiredError('timeInBiz','desiredAmt','annualSales','bizAddress','city','state','zipCode');
     var emptyFormList = checkForEmptyInput('timeInBiz','desiredAmt','annualSales','bizAddress','city','state','zipCode');
     if(emptyFormList.length == 0){
-        createContactFormReceivedPage();
+        createContactFormReceivedPage();    
     }else{
         createRequiredFormWarning(emptyFormList);
     }
@@ -114,7 +118,7 @@ function createSecondFormPage() {
 function createContactFormReceivedPage(){
     $('.reqForms').remove();
     $('#complete').addClass('filled');
-    var confirmationPage = $('<div>').addClass('contactConfirmation col-xs-12').text('Thank you');
+    var confirmationPage = $('<div>').addClass('contactConfirmation col-xs-8 col-xs-offset-2').text('Thank you');
     $('.form__wrapper').append(confirmationPage);   
 }
 

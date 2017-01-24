@@ -8,9 +8,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" type="text/css" href="style.css"> </head>
-<script src="script.js"></script>
+    <script src="jquery.maskedinput.js"></script>
+    <script src="script.js"></script>
 
 <body>
     <!--Nav--Asset-->
@@ -210,10 +210,19 @@
             </div>
             <div class="form__wrapper row contactForm">
                 <form action="#" id="inputSet" class="reqForms form-group">
+                    <div class="contactConfirmation col-xs-8 col-xs-offset-2">
+                        <div class="confirmationMsgWrapper">
+                            <div>
+                                <p style="display:inline-block">Thank you for contacting us. One of our associates will be contact with you shortly.
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><path style="fill:white" d="M9 16.172l10.594-10.594 1.406 1.406-12 12-5.578-5.578 1.406-1.406z"></path></svg>
+                                </p>
+                            </div>    
+                        </div>
+                    </div>
+<!--
                     <div class="col-xs-12 form--div">
                         <div class="col-md-3">
                             <input class="form-control" id="fName" type="text" name="name" placeholder="FIRST NAME">
-<!--                            <div style="color:#C82828;">Required</div>-->
                         </div>
                         <div class="col-md-3">
                             <input class="form-control" id="lName" type="text" name="name" placeholder="LAST NAME">
@@ -227,7 +236,7 @@
                             <input class="form-control" id="email" type="text" name="email" placeholder="EMAIL">
                         </div>
                         <div class="col-md-3">
-                            <input class="form-control" id="phone" type="text" name="phone_number" placeholder="PHONE NUMBER">
+                            <input class="form-control" id="phone" type="tel" name="phone_number" placeholder="PHONE NUMBER">
                         </div>
                     </div>
                     <div class="col-xs-12 form--div enterDiv">
@@ -235,6 +244,7 @@
                             <button type="button" class="enter btn btn-lg btn-primary">NEXT</button>
                         </div>
                     </div>
+-->
                 </form>
                 
             </div>

@@ -124,6 +124,9 @@
 .section--contact{
     background-color:#5D8F66;
 }
+.contact__info__wrapper{
+    padding-bottom: 30px;
+}
 .text__wrapper{
     text-align: center;
     color:white;    
@@ -147,14 +150,12 @@
 .submit--wrapper{
     text-align: center;   
 }
-.confirmationPage{
-/*    margin: 3em;*/
-}
-.confirmationPage h4{
+.contactConfirmation{
     text-align: center;
 }
-.confirmationPage__wrapper{
-    margin: 3em;
+.confirmationMsgWrapper{
+    height: 100px;
+    border: 1px solid white;  
 }
 .required{
     border:2px solid #C82828;
