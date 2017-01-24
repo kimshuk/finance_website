@@ -156,8 +156,13 @@
 .confirmationPage__wrapper{
     margin: 3em;
 }
-
-
+.required{
+    border:2px solid #C82828;
+    border-bottom: 6px solid #C82828;
+}
+.errorMsg{
+    color: #C82828;
+}
 /*----------------------------info---------------------------------*/
 
 .info_wrapper {
