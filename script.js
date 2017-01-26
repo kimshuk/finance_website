@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    applyClickHandler($('.form__wrapper'),'.enter',validateFirstInputSet);
+    addClick();
+    //applyClickHandler($('.form__wrapper'),'.enter',validateFirstInputSet);
 });
 jQuery(function($){
     $("#phone").mask("(999) 999-9999");
@@ -51,14 +52,12 @@ function validateSecondInputSet(){
     clearRequiredError('timeInBiz','desiredAmt','annualSales','bizAddress','city','state','zipCode');
     var emptyFormList = checkForEmptyInput('timeInBiz','desiredAmt','annualSales','bizAddress','city','state','zipCode');
     if(emptyFormList.length == 0){
+        //need ajax call
         createContactFormReceivedPage();    
     }else{
         createRequiredFormWarning(emptyFormList);
     }
 }
-
-
-
 
 function createSecondFormPage() {
     var timeInBizSelect = $('<select id="timeInBiz" class="form-control" form="inputSet">'),
@@ -112,16 +111,16 @@ function createSecondFormPage() {
 
 }
 
-
-
-
 function createContactFormReceivedPage(){
     $('.reqForms').remove();
     $('#complete').addClass('filled');
-    var confirmationPage = $('<div>').addClass('contactConfirmation col-xs-8 col-xs-offset-2').text('Thank you');
-    $('.form__wrapper').append(confirmationPage);   
+    var confirmationPage = $('<div class="contactConfirmation col-xs-8 col-xs-offset-2">');
+    var confirmationMsgWrapper = $('<div class="confirmationMsgWrapper">');
+    var msgBox = $('<div class="msgBox">');
+    var msg = $('<p>').text('Thank you for contacting CNC.');
+    var msg2 = $('<p>').text('One of our associates will be contact with you shortly.');
+    $('.form__wrapper').append(confirmationPage.append(confirmationMsgWrapper.append(msgBox.append(msg).append(msg2))));   
 }
-
 
 function collectFormData1(){
     var contactObj = new Object;
@@ -132,5 +131,67 @@ function collectFormData1(){
     contactObj.phone = $('#phone').val();
     console.log(contactObj);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		function addClick(){
+			$('.btn-primary').click(function(){
+				console.log($('textarea[name="body"]').val());
+				console.log($('input[name="name1"]').val());
+				console.log($('input[name="email1"]').val());
+//				if($('textarea[name="body"]').val() ==''|| $('input[name="name"]').val() == ""||$('input[name="email"]').val()== ""){
+//					alert("Please input all 3 information");
+//					return;
+//				}
+				$.ajax({
+					method:'post',
+					url:'mail_handler.php',
+					type:'json',
+					data : {
+						name : $('input[name="name1"]').val(),
+						email : $('input[name="email1"]').val(),
+						body : $('textarea[name="body"]').val()
+					},
+					success: function(response){
+						//var stringResponse = response.substring(4);
+						var stringResponse = response;
+						console.log(stringResponse);
+						if(stringResponse == "success"){
+							addThankyou();
+							setTimeout(removeThankyou,2000);
+						}else{
+							addErrorMsg();
+						}
+					},
+					error : function(response){
+						console.log(response,'your ajax failed');
+						addErrorMsg();
+					}
+				})
+			})
+		}
+		function addThankyou(){
+			var thankYouDiv = $('<div id="thankyou">').html("Thank You. <br> Message has been sent.");
+			$('#sendingGifContainer').append(thankYouDiv);
+		}
+		function addErrorMsg(){
+			var errorMsg = $('<div id="errorMsg">').text("Message was not successful");
+			$('#sendingGifContainer').append(errorMsg);
+		}
 
 
