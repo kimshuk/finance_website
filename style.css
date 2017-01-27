@@ -153,17 +153,8 @@
 .contactConfirmation{
     text-align: center;
 }
-.confirmationMsgWrapper{
-    height: 100px;
-/*    background-color: #2e6da4;*/
-    border: 1px solid #2e6da4;
-/*    border-radius: 10px;*/
-/*    margin: 10px;    */
-}
 .msgBox{
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);    
+    position: relative;  
     color: white;
 }
 .required{
@@ -172,6 +163,9 @@
 }
 .errorMsg{
     color: #C82828;
+}
+.hidden{
+    display: none;
 }
 /*----------------------------info---------------------------------*/
 

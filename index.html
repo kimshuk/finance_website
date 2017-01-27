@@ -9,8 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css"> </head>
-    <script src="jquery.maskedinput.js"></script>
-    <script src="script.js"></script>
+<script src="jquery.maskedinput.js"></script>
+<script src="script.js"></script>
 
 <body>
     <!--Nav--Asset-->
@@ -121,7 +121,7 @@
                                 </div>
                                 <div class="btn btn-success cards_btn margin_top">Apply</div>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
                 <div class="row box">
@@ -210,17 +210,6 @@
             </div>
             <div class="form__wrapper row contactForm">
                 <form action="#" id="inputSet" class="reqForms form-group">
-<!--
-                    <div class="contactConfirmation col-xs-8 col-xs-offset-2">
-                        <div class="confirmationMsgWrapper">
-                            <div class="msgBox">
-                                <p>Thank you for contacting CNC.<br> One of our associates will be contact with you shortly.
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><path style="fill:white" d="M9 16.172l10.594-10.594 1.406 1.406-12 12-5.578-5.578 1.406-1.406z"></path></svg>
-                                </p>
-                            </div>    
-                        </div>
-                    </div>
--->
                     <div class="col-xs-12 form--div">
                         <div class="col-md-3">
                             <input class="form-control" id="fName" type="text" name="name" placeholder="FIRST NAME">
@@ -240,19 +229,61 @@
                             <input class="form-control" id="phone" type="tel" name="phone_number" placeholder="PHONE NUMBER">
                         </div>
                     </div>
+                    <div class="col-xs-12 form--div hidden">
+                        <div class="col-md-3">
+                            <select id="timeInBiz" class="form-control" form="inputSet">
+                                <option value="" disabled="" selected="">TIME IN BUSINESS</option>
+                                <option value="10 years or longer">10 years or longer</option>
+                                <option value="5 - 9 years">5 - 9 years</option>
+                                <option value="2 - 4 years">2 - 4 years</option>
+                                <option value="1 year">1 year</option>
+                                <option value="6 months">6 months</option>
+                                <option value="less than 6 months">less than 6 months</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select id="desiredAmt" class="form-control" form="inputSet">
+                                <option value="" disabled="" selected="">LOAN AMOUNT</option>
+                                <option value="$500,000+">$500,000+</option>
+                                <option value="$200,000-$500,000">$200,000-$500,000</option>
+                                <option value="$50,000-$200,000">$50,000-$200,000</option>
+                                <option value="$25,000-$50,000">$25,000-$50,000</option>
+                                <option value="$5000-$25000">$5000-$25000</option>
+                                <option value="Unknown">Not Sure Yet</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <input id="annualSales" class="form-control" type="text" placeholder="ANNUAL GROSS SALES">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form--div hidden">
+                        <div class="col-md-3">
+                            <input id="bizAddress" class="form-control" type="text" placeholder="BUSINESS ADDRESS">
+                        </div>
+                        <div class="col-md-3">
+                            <input id="city" class="form-control" type="text" placeholder="CITY">
+                        </div>
+                        <div class="col-md-3">
+                            <input id="state" class="form-control" type="text" placeholder="STATE">
+                        </div>
+                        <div class="col-md-3">
+                            <input id="zipCode" class="form-control" type="text" placeholder="ZIP" pattern="[0-9]*" maxlength="5" required="" name="zip">
+                        </div>
+                    </div>
+                    <div class="contactConfirmation col-xs-8 col-xs-offset-2 hidden">
+                        <div class="msgBox">
+                            <p>Thank you for contacting CNC.<br>One of our associates will be contact with you shortly.</p>
+                        </div>
+                    </div>
                     <div class="col-xs-12 form--div enterDiv">
                         <div class="col-xs-4 col-xs-offset-4 submit--wrapper">
                             <button type="button" class="enter btn btn-lg btn-primary">NEXT</button>
                         </div>
                     </div>
-               
-                <input type="text" name="name1">
-                <input type="text" name="email1">
-                <textarea name="body" id="" cols="30" rows="10"></textarea>
                 </form>
-                
+
             </div>
-        
+
         </div>
     </section>
     <!--footer-->

@@ -39,7 +39,7 @@ $mail->AltBody = htmlentities($_POST['body']);
 
 if(!$mail->send()) {
     //echo 'Message could not be sent.';
-    //echo 'Mailer Error: ' . $mail->ErrorInfo;
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
     echo "fail";
 } else {
     //echo 'Message has been sent';
