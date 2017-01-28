@@ -1,19 +1,24 @@
 /*-------------------------Nav--------------------------------*/
-*{
+
+* {
     font-family: montserrat;
 }
+
+.nav-wrapper {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+}
+
 .navigation.nav__utility {
     background-color: black;
     color: white;
     text-align: right;
-    position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 1;
 }
+
 .section--navigation {
     width: 100%;
-    padding-top: 26px;
 }
 
 .navigation {
@@ -28,7 +33,7 @@
 }
 
 .nav__main {
-    background-color: transparent;
+    background-color: #ffffff;
     color: black;
 }
 
@@ -65,12 +70,14 @@
 }
 
 
-
-
 /*-------------------------Carousel--------------------------------*/
 
 .item {
     position: relative;
+}
+
+.carousel {
+    padding-top: 8em;
 }
 
 .carouselImg {
@@ -80,13 +87,31 @@
     background: url(assets/slider-img-3-blur.jpg) center center / cover no-repeat;
 }
 
-.inner_carouselImg {
-    background: url(assets/slider-img-3.jpg) center center / cover no-repeat;
+.inner_carouselImg-one,
+.inner_carouselImg-two,
+.inner_carouselImg-three,
+.inner_carouselImg-four {
     max-width: 1600px;
     min-height: 550px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.inner_carouselImg-one {
+    background: url(/finance_website/assets/banner1.jpg) center center / cover no-repeat;
+}
+
+.inner_carouselImg-two {
+    background: url(/finance_website/assets/banner2.jpg) center center / cover no-repeat;
+}
+
+.inner_carouselImg-three {
+    background: url(/finance_website/assets/banner3.jpg) center center / cover no-repeat;
+}
+
+.inner_carouselImg-four {
+    background: url(/finance_website/assets/banner5.jpg) center center / cover no-repeat;
 }
 
 .inner_carouselText {
@@ -119,37 +144,55 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
+
 /*-------------------------Contact--------------------------------*/
 
-.section--contact{
-    background-color:#5D8F66;
+.section--contact {
+    background-color: #5D8F66;
 }
+<<<<<<< HEAD
 .contact__info__wrapper{
     padding-bottom: 30px;
 }
 .text__wrapper{
+=======
+
+.text__wrapper {
+>>>>>>> 6bc75c02d7a5e9ab72f08ae69fc34103e73a74e4
     text-align: center;
-    color:white;    
+    color: white;
 }
-.statusBar{
-/*    display: flex;*/
+
+.statusBar {
+    /*    display: flex;*/
     margin-top: 1em;
 }
-.statusBar .step{
+
+.statusBar .step {
     border: 1px solid white;
     border-radius: 5px;
 }
+<<<<<<< HEAD
 .statusBar .filled{
     border: 1px solid #2e6da4;
+=======
+
+.statusBar .filled {
+    border: 1px solid #337ab7;
+>>>>>>> 6bc75c02d7a5e9ab72f08ae69fc34103e73a74e4
     border-radius: 5px;
     background-color: #2e6da4;
 }
-.form--div{
+
+.form--div {
     margin: 1em 0;
 }
-.submit--wrapper{
-    text-align: center;   
+
+.submit--wrapper {
+    text-align: center;
 }
+<<<<<<< HEAD
 .contactConfirmation{
     text-align: center;
 }
@@ -166,6 +209,19 @@
 }
 .hidden{
     display: none;
+=======
+
+.confirmationPage {
+    /*    margin: 3em;*/
+}
+
+.confirmationPage h4 {
+    text-align: center;
+}
+
+.confirmationPage__wrapper {
+    margin: 3em;
+>>>>>>> 6bc75c02d7a5e9ab72f08ae69fc34103e73a74e4
 }
 /*----------------------------info---------------------------------*/
 
@@ -292,14 +348,15 @@
 
 /*----------------------------link-------------------------------*/
 
-a:hover {
+a:hover,
+a:focus {
     text-decoration: none;
 }
 
+
 /*----------------------------Company Info-------------------------------*/
-.section_company .company_info_wrapper{
-    background-color: #f1a7a7;;    
+
+.section_company .company_info_wrapper {
+    background-color: #f1a7a7;
     text-align: center;
 }
-
-

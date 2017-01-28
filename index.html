@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="style.css"> </head>
-<script src="jquery.maskedinput.js"></script>
-<script src="script.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="node_modules/remodal/dist/remodal.css">
+    <link rel="stylesheet" href="node_modules/remodal/dist/remodal-default-theme.css">
+</head>
 <body>
     <!--Nav--Asset-->
-    <ul class="navigation nav__utility">
-        <div class="container">
-            <div class="row">
-                <li class="nav__item"><a href="#" class="top_nav__item--link"><span class="glyphicon glyphicon-envelope"></span> EMAIL</a></li>
-                <li class="nav__item"><a href="#" class="top_nav__item--link"><span class="glyphicon glyphicon-earphone"></span> 123-456-7890</a></li>
-            </div>
-        </div>
-    </ul>
-    <nav class="section--navigation">
-        <ul class="navigation nav__main">
+    <div class="nav-wrapper">
+        <ul class="navigation nav__utility">
             <div class="container">
                 <div class="row">
-                    <li class="nav__item"><img class="nav__item__img" src="assets/sample_logo.png" alt="logo"></li>
-                    <li class="nav__item nav__item--right">
-                        <ul class="navigation">
-                            <li class="nav__item"><a href="#" class="btm_nav__item--link">About Us</a></li>
-                            <li class="nav__item"><a href="#" class="btm_nav__item--link">Service1</a></li>
-                            <li class="nav__item"><a href="#" class="btm_nav__item--link ">Service2</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav__item"><a href="#" class="top_nav__item--link"><span class="glyphicon glyphicon-envelope"></span> EMAIL</a></li>
+                    <li class="nav__item"><a href="#" class="top_nav__item--link"><span class="glyphicon glyphicon-earphone"></span> 123-456-7890</a></li>
                 </div>
             </div>
         </ul>
-    </nav>
+        <nav class="section--navigation">
+            <ul class="navigation nav__main">
+                <div class="container">
+                    <div class="row">
+                        <li class="nav__item"><img class="nav__item__img" src="assets/sample_logo.png" alt="logo"></li>
+                        <li class="nav__item nav__item--right">
+                            <ul class="navigation">
+                                <li class="nav__item"><a href="#" class="btm_nav__item--link">About Us</a></li>
+                                <li class="nav__item"><a href="#" class="btm_nav__item--link">Service1</a></li>
+                                <li class="nav__item"><a href="#" class="btm_nav__item--link ">Service2</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </div>
     <!--Main Carousel-->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -133,65 +132,88 @@
         </div>
     </section>
     <!--Product Info-->
-    <section class="section_product">
-        <div class="info_wrapper">
-            <div class="container">
-                <div class="row box">
-                    <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-                        <h1 class="info_title">Info Title</h1>
-                        <p class="info_details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque debitis dolor harum. Velit et, rerum!</p>
+    <div class="remodal-bg">
+        <section class="section_product">
+            <div class="info_wrapper">
+                <div class="container">
+                    <div class="row box">
+                        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                            <h1 class="info_title">Info Title</h1>
+                            <p class="info_details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque debitis dolor harum. Velit et, rerum!</p>
+                        </div>
                     </div>
-                </div>
-                <div class="row box">
-                    <div class="col-xs-6 cards">
-                        <a href="#">
-                            <div class="cards_wrapper">
-                                <div class="cards_header" data-legend="FIXED">
-                                    <h1 class="cards_num">30</h1>
-                                    <h1 class="cards_year">YEAR</h1>
-                                </div>
-                                <div class="cards_content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <div class="cards_rate">
-                                        <p class="rate_num">2.345% <span class="rate_text">RATE</span></p>
+                    <div class="row box">
+                        <div class="col-xs-6 cards">
+                            <a href="#modalOne">
+                                <div class="cards_wrapper">
+                                    <div class="cards_header" data-legend="FIXED">
+                                        <h1 class="cards_num">30</h1>
+                                        <h1 class="cards_year">YEAR</h1>
                                     </div>
-                                    <div class="cards_apr margin_top">
-                                        <p class="apr_num">1.234% <span class="apr_text">APR</span></p>
+                                    <div class="cards_content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <div class="cards_rate">
+                                            <p class="rate_num">2.345% <span class="rate_text">RATE</span></p>
+                                        </div>
+                                        <div class="cards_apr margin_top">
+                                            <p class="apr_num">1.234% <span class="apr_text">APR</span></p>
+                                        </div>
+                                        <div class="btn btn-success cards_btn margin_top">Apply</div>
                                     </div>
-                                    <div class="btn btn-success cards_btn margin_top">Apply</div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 cards">
+                            <a href="#modalTwo">
+                                <div class="cards_wrapper">
+                                    <div class="cards_header" data-legend="FIXED">
+                                        <h1 class="cards_num">30</h1>
+                                        <h1 class="cards_year">YEAR</h1>
+                                    </div>
+                                    <div class="cards_content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <div class="cards_rate">
+                                            <p class="rate_num">2.345% <span class="rate_text">RATE</span></p>
+                                        </div>
+                                        <div class="cards_apr margin_top">
+                                            <p class="apr_num">1.234% <span class="apr_text">APR</span></p>
+                                        </div>
+                                        <div class="btn btn-success cards_btn margin_top">Apply</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-xs-6 cards">
-                        <a href="#">
-                            <div class="cards_wrapper">
-                                <div class="cards_header" data-legend="FIXED">
-                                    <h1 class="cards_num">30</h1>
-                                    <h1 class="cards_year">YEAR</h1>
-                                </div>
-                                <div class="cards_content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <div class="cards_rate">
-                                        <p class="rate_num">2.345% <span class="rate_text">RATE</span></p>
-                                    </div>
-                                    <div class="cards_apr margin_top">
-                                        <p class="apr_num">1.234% <span class="apr_text">APR</span></p>
-                                    </div>
-                                    <div class="btn btn-success cards_btn margin_top">Apply</div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row box">
-                    <div class="col-md-8 col-md-offset-2">
-                        <p class="padding_top_xl padding_bottom_xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, tempora.</p>
+                    <div class="row box">
+                        <div class="col-md-8 col-md-offset-2">
+                            <p class="padding_top_xl padding_bottom_xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, tempora.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+    <!--Modal dialog-->
+    <div class="remodal" data-remodal-id="modalOne">
+        <button class="remodal-close" data-remodal-action="close"></button>
+        <h1>Credit Card </h1>
+        <p></p>
+        <p>Owner's credit score: Min 600</p>
+        <p>Funding typically available in 5 days or less</p>
+        <p>Slow month, slow payment</p>
+        <br>
+        <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+    </div>
+    <div class="remodal" data-remodal-id="modalTwo">
+        <button class="remodal-close" data-remodal-action="close"></button>
+        <h1>ACH</h1>
+        <p>Re</p>
+        <p>Approval on within 24hrs after documents submitted</p>
+        <p>Funding typically available in 5 days or less</p>
+        <p>Slow month, slow payment</p>
+        <br>
+        <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+    </div>
     <!--Contact-->
     <section class="section--contact">
         <div class="container contact__info__wrapper">
@@ -272,7 +294,8 @@
                     </div>
                     <div class="contactConfirmation col-xs-8 col-xs-offset-2 hidden">
                         <div class="msgBox">
-                            <p>Thank you for contacting CNC.<br>One of our associates will be contact with you shortly.</p>
+                            <p>Thank you for contacting CNC.
+                                <br>One of our associates will be contact with you shortly.</p>
                         </div>
                     </div>
                     <div class="col-xs-12 form--div enterDiv">
@@ -288,6 +311,11 @@
     </section>
     <!--footer-->
     <!--    <footer></footer>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./node_modules/remodal/dist/remodal.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+    <script src="jquery.maskedinput.js"></script>
 </body>
-
 </html>
