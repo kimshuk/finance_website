@@ -1,99 +1,240 @@
-$(document).ready(function(){
-    applyClickHandler($('.form__wrapper'),'.enter',createSecondFormPage);
+$(document).ready(function () {
+    applyClick();
 });
-function applyClickHandler(parentElement,childClassName,functionToPerform){
-    parentElement.on("click",childClassName,function(){
-        functionToPerform();
+//apply click handler to the 'next' button
+//when next button clicks
+//see if any form is missing information or form input is incorrect
+//if yes, mark error, return
+//else
+//remove handler
+//fill step2 status bar
+//save 1st set of inputs, 
+//disable 1st input set
+//unhide 2nd set
+//handler to the second set next button
+//when second next button clicks
+//see if any form is missing information or form input is incorrect
+//if yes, mark error, return
+//else
+//save 2nd set of inputs, 
+//disable 2nd input set
+        
+        //show review page
+        //if confirm clicked
+            //send email
+                //stringify collected obj form data and make it body
+                //use name email and body and call ajax
+            //show confirmation
+                //either failed or successful
+            //reset the forms
+        //else
+            //allow edit which ever edit button clicked - edit img on the form
+            //once changed and confirm clicked,
+            //validate the form
+                //if okay,
+                    //send email
+                        //stringify collected obj form data and make it body
+                        //use name email and body and call ajax
+                    //show confirmation
+                        //either failed or successful
+                    //show confirmation
+                    //reset the forms
+                //else
+                    //show error
+                    //return
+
+
+
+
+var firstFormSetId = ['fName', 'lName', 'bizName', 'email', 'phone'];
+var secondFormSetId = ['timeInBiz', 'desiredAmt', 'annualSales', 'bizAddress', 'city', 'state', 'zipCode'];
+var formInputData = {};
+jQuery(function ($) {
+    $("#phone").mask("(999) 999-9999");
+    $("#zipCode").mask("99999");
+});
+
+function applyClick(){
+    $('.enter').click(function(){
+        validateFirstFormSet();
+    });
+    $('.submit').click(function(){
+        validateSecondFormSet();
     })
-}
-function createSecondFormPage(){
-    var timeInBizSelect = $('<select id="timeInBiz" class="form-control" form="inputSet">'),
-        timeInBizOption0 = $('<option value="" disabled selected>TIME IN BUSINESS</option>'), 
-        timeInBizOption1 = $('<option value="10 years or longer">').text('10 years or longer'),
-        timeInBizOption2 = $('<option value="5 - 9 years">').text('5 - 9 years'),
-        timeInBizOption3 = $('<option value="2 - 4 years">').text('2 - 4 years'),
-        timeInBizOption4 = $('<option value="1 year">').text('1 year'),
-        timeInBizOption5 = $('<option value="6 months">').text('6 months'),
-        timeInBizOption6 = $('<option value="less than 6 months">').text('less than 6 months'),
-        timeInBiz = timeInBizSelect.append(timeInBizOption0).append(timeInBizOption1).append(timeInBizOption2).append(timeInBizOption3).append(timeInBizOption4).append(timeInBizOption5).append(timeInBizOption6);
     
-    var desiredAmtSelect = $('<select id="desiredAmt" class="form-control" form="inputSet">'),
-        desiredAmtOption0 = $('<option value="" disabled selected>LOAN AMOUNT</option>'), 
-        desiredAmtOption1 = $('<option value="$500,000+">').text('$500,000+'),
-        desiredAmtOption2 = $('<option value="$200,000-$500,000">').text('$200,000-$500,000'),
-        desiredAmtOption3 = $('<option value="$50,000-$200,000">').text('$50,000-$200,000'),
-        desiredAmtOption4 = $('<option value="$25,000-$50,000">').text('$25,000-$50,000'),
-        desiredAmtOption5 = $('<option value="$5000-$25000">').text('$5000-$25000'),
-        desiredAmtOption6 = $('<option value="Unknown">').text('Not Sure Yet'),
-        desiredAmt = desiredAmtSelect.append(desiredAmtOption0).append(desiredAmtOption1).append(desiredAmtOption2).append(desiredAmtOption3).append(desiredAmtOption4).append(desiredAmtOption5).append(desiredAmtOption6);
-    
-    var annualSales = $('<input id="annualSales" class="form-control" type="text" placeholder="ANNUAL GROSS SALES">');
-    var bizAddress = $('<input id="address" class="form-control" type="text" placeholder="BUSINESS ADDRESS">');
-    var city = $('<input id="city" class="form-control" type="text" placeholder="CITY">');
-    var state = $('<input id="state" class="form-control" type="text" placeholder="STATE">');
-    var zipCode =$('<input id="zip" class="form-control" type="text" placeholder="ZIP" pattern="[0-9]*" maxlength="5" required name="zip">');
-    
-    $('.enterDiv').before($('<div class="col-xs-12 form--div">')
-                          .append($('<div class="col-md-3">').append(timeInBiz))
-                          .append($('<div class="col-md-3">').append(desiredAmt))
-                          .append($('<div class="col-md-3">').append(annualSales)));
-                          
-    $('.enterDiv').before($('<div class="col-xs-12 form--div">')
-                          .append($('<div class="col-md-3">').append(bizAddress))
-                          .append($('<div class="col-md-3">').append(city))
-                          .append($('<div class="col-md-3">').append(state))
-                          .append($('<div class="col-md-3">').append(zipCode))
-                          );   
-    
-    $('#step2').addClass('filled');
-    $('.enter').text('SUBMIT').addClass('submit').removeClass('enter');
-    $('#fName').attr('disabled','disabled');
-    $('#lName').attr('disabled','disabled');
-    $('#bizName').attr('disabled','disabled');
-    $('#email').attr('disabled','disabled');
-    $('#phone').attr('disabled','disabled');
-//    collectFormData1(); 
-    var emptyFormList = validateEmptyText('fName','lName','bizName','email','phone');
-    if(emptyFormList){
-        console.log(emptyFormList);
-        //some forms are empty
-        //need to indicate the form to turn red
-    }else{
-        applyClickHandler($('.form__wrapper'),'.submit',createContactFormReceivedPage);    
-    }
-}
-function createRequiredFormWarning(){
-    
-}
-function createContactFormReceivedPage(){
-    $('.reqForms').remove();
-    $('#complete').addClass('filled');
-    var confirmationPage = $('<div>').addClass('contactConfirmation col-xs-12').text('Thank you');
-    $('.form__wrapper').append(confirmationPage);   
 }
 
-function validateEmptyText(id){
+
+
+//checks for empty inputs based on ids
+function checkForEmptyInput(idArr) {
     var emptyInputList = [];
-    var i;
-    for(i = 0; i < arguments.length; i++){
-        if($('#'+arguments[i]).val() == null || $('#'+arguments[i]).val() == ""){
-            emptyInputList.push(arguments[i]);
+    //var args = Array.prototype.slice.call(arguments);
+    idArr.forEach(function (v) {
+        if ($('#' + v).val() == null || $('#' + v).val() == "") {
+            emptyInputList.push(v);
         }
-    }
-    if(emptyInputList.length != 0){
+    });
+    if (emptyInputList.length != 0) {
         return emptyInputList;
-    }else{
+    } else {
         return false;
     }
 }
-function collectFormData1(){
-    var contactObj = new Object;
-    contactObj.firstName = $('#fName').val();
-    contactObj.lastName = $('#lName').val();
-    contactObj.bizName = $('#bizName').val();
-    contactObj.email = $('#email').val();
-    contactObj.phone = $('#phone').val();
-    console.log(contactObj);
+
+//adds 'required' error msg to the input
+function createRequiredFormWarning(emptyFormsList) {
+    emptyFormsList.forEach(function (v) {
+        $("#" + v).addClass('required');
+        $("#" + v).after($('<div>').addClass('errorMsg').text('Required'));
+    })
+}
+//remove 'required' error msg
+function clearRequiredError(idArr) {
+    //var args = Array.prototype.slice.call(arguments);
+    idArr.forEach(function (v) {
+        $('#' + v).removeClass('required');
+    });
+    $('.errorMsg').remove();
+}
+
+//collect input data
+function collectInputData(idArr){
+    idArr.forEach(function(v){
+        formInputData[v] = $('#'+v).val();
+    })
+    console.log('form input data inserted into the object',formInputData);
+}
+
+//disable input form
+function diableInput(idArr){
+    idArr.forEach(function(v){
+        $('#'+v).attr('disabled', 'disabled');
+    })
+}
+
+//hides an element
+function hideElement(className){
+    $('.'+className).addClass('hidden');
+}
+//show hidden element
+function showHiddenElement(className){
+    $('.'+className).removeClass('hidden');
+}
+
+function addOrRemoveClass(targetElement,action,className){
+    if(action == "add"){
+        $('.'+targetElement).addClass(className);
+    }else{
+        $('.'+targetElement).removeClass(className);
+    }
+}
+
+function validateFirstFormSet(){
+    clearRequiredError(firstFormSetId);
+    var checkForms = checkForEmptyInput(firstFormSetId);
+    if(checkForms){
+        console.log('incorrect forms',checkForms);
+        createRequiredFormWarning(checkForms);
+    }else{
+        console.log('forms all clear',checkForms);
+        collectInputData(firstFormSetId);
+        diableInput(firstFormSetId);
+        addOrRemoveClass('enterDiv','add','hidden');
+        addOrRemoveClass('second-set','remove','hidden');
+        addOrRemoveClass('submitDiv','remove','hidden');
+        addOrRemoveClass('step2','add','filled');
+    }
+}
+function validateSecondFormSet(){
+    clearRequiredError(secondFormSetId);
+    var checkForms = checkForEmptyInput(secondFormSetId);
+    if(checkForms){
+        console.log('incorrect forms',checkForms);
+        createRequiredFormWarning(checkForms);
+    }else{
+        console.log('forms all clear',checkForms);
+        collectInputData(secondFormSetId);
+        diableInput(secondFormSetId);
+        addOrRemoveClass('step2','add','filled');
+        addOrRemoveClass('submitDiv','add','hidden');
+        sendMail(createTableForEmail());
+        //createTableForEmail();
+        
+        addOrRemoveClass('third-set','remove','hidden');
+        addOrRemoveClass('review','add','filled');
+        addOrRemoveClass('complete','add','filled');  
+    }
+}
+
+function createTableForEmail(){
+    var tableStart = '<table>'; 
+    var tableEnd = '</table>';
+    var trStart = '<tr><td>';
+    var td = '</td><td>';
+    var trEnd = '</td></tr>';    
+    for(data in formInputData){
+        tableStart += trStart+data+td+formInputData[data]+trEnd
+    }
+    tableStart += tableEnd;
+    return(tableStart)
 }
 
 
+
+
+
+
+
+
+function sendMail(body) {
+        console.log(formInputData.fName+" "+formInputData.lName);
+        console.log(formInputData.email);
+        console.log(body);
+        $.ajax({
+            method: 'post',
+            url: 'mail_handler.php',
+            type: 'json',
+            data: {
+                name: formInputData.fName+" "+formInputData.lName,
+                email: formInputData.email,
+                body: body
+            },
+            success: function (response) {
+                var stringResponse = response;
+                if (stringResponse == "success") {
+                    //addThankyou();
+                    console.log(stringResponse);
+                } else {
+                    //addErrorMsg();
+                    console.log(stringResponse);
+                }
+            },
+            error: function (response) {
+                console.log(response, 'your ajax failed');
+                //addErrorMsg();
+            }
+        })
+}
+
+function addThankyou() {
+    var thankYouDiv = $('<div id="thankyou">').html("Thank You. <br> Message has been sent.");
+    $('#sendingGifContainer').append(thankYouDiv);
+}
+
+function addErrorMsg() {
+    var errorMsg = $('<div id="errorMsg">').text("Message was not successful");
+    $('#sendingGifContainer').append(errorMsg);
+}
+
+//Nav JS
+
+function stickyNav() {
+    var scrollTop = $(this).scrollTop();
+    var secNav = $('.section--navigation');
+    if (scrollTop > 0) {
+        secNav.addClass('nav__main-sticky');
+    } else {
+        secNav.removeClass('nav__main-sticky');
+    }
+}
