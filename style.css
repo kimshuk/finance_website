@@ -151,15 +151,11 @@
 .section--contact {
     background-color: #5D8F66;
 }
-<<<<<<< HEAD
+
 .contact__info__wrapper{
     padding-bottom: 30px;
 }
 .text__wrapper{
-=======
-
-.text__wrapper {
->>>>>>> 6bc75c02d7a5e9ab72f08ae69fc34103e73a74e4
     text-align: center;
     color: white;
 }
@@ -173,14 +169,8 @@
     border: 1px solid white;
     border-radius: 5px;
 }
-<<<<<<< HEAD
 .statusBar .filled{
-    border: 1px solid #2e6da4;
-=======
-
-.statusBar .filled {
     border: 1px solid #337ab7;
->>>>>>> 6bc75c02d7a5e9ab72f08ae69fc34103e73a74e4
     border-radius: 5px;
     background-color: #2e6da4;
 }
@@ -192,7 +182,6 @@
 .submit--wrapper {
     text-align: center;
 }
-<<<<<<< HEAD
 .contactConfirmation{
     text-align: center;
 }
@@ -209,19 +198,6 @@
 }
 .hidden{
     display: none;
-=======
-
-.confirmationPage {
-    /*    margin: 3em;*/
-}
-
-.confirmationPage h4 {
-    text-align: center;
-}
-
-.confirmationPage__wrapper {
-    margin: 3em;
->>>>>>> 6bc75c02d7a5e9ab72f08ae69fc34103e73a74e4
 }
 /*----------------------------info---------------------------------*/
 
