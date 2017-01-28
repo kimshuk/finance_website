@@ -179,7 +179,7 @@
     margin: 1em 0;
 }
 
-.submit--wrapper {
+.submit--wrapper, .enter--wrapper{
     text-align: center;
 }
 .contactConfirmation{

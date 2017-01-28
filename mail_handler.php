@@ -36,6 +36,7 @@ $mail->isHTML(true);                                  // Set email format to HTM
 //$mail->Subject = $_POST['subject'];
 $mail->Body    = $_POST['body'];
 $mail->AltBody = htmlentities($_POST['body']);
+$mail->IsHTML(true); 
 
 if(!$mail->send()) {
     //echo 'Message could not be sent.';

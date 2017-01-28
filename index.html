@@ -222,9 +222,10 @@
             <div class="container contact__info__wrapper">
                 <div class="text__wrapper row statusBar">
                     <div class="col-md-8 col-md-offset-2 statusBar">
-                        <div class="step col-sm-4 filled" id="step1">Step1</div>
-                        <div class="step col-sm-4" id="step2">step2</div>
-                        <div class="step col-sm-4" id="complete">Complete</div>
+                        <div class="step col-sm-3 filled step1" >Step1</div>
+                        <div class="step col-sm-3 step2">step2</div>
+                        <div class="step col-sm-3 review">Review</div>
+                        <div class="step col-sm-3 complete">Complete</div>
                     </div>
                 </div>
                 <div class="text__wrapper row contactHeader">
@@ -234,7 +235,7 @@
                     </div>
                 </div>
                 <div class="form__wrapper row contactForm">
-                    <form action="#" id="inputSet" class="reqForms form-group">
+                    <div class="first-set">
                         <div class="col-xs-12 form--div">
                             <div class="col-md-3">
                                 <input class="form-control" id="fName" type="text" name="name" placeholder="FIRST NAME">
@@ -254,7 +255,9 @@
                                 <input class="form-control" id="phone" type="tel" name="phone_number" placeholder="PHONE NUMBER">
                             </div>
                         </div>
-                        <div class="col-xs-12 form--div hidden">
+                    </div>
+                    <div class="second-set hidden">
+                        <div class="col-xs-12 form--div">
                             <div class="col-md-3">
                                 <select id="timeInBiz" class="form-control" form="inputSet">
                                     <option value="" disabled="" selected="">TIME IN BUSINESS</option>
@@ -281,7 +284,7 @@
                                 <input id="annualSales" class="form-control" type="text" placeholder="ANNUAL GROSS SALES">
                             </div>
                         </div>
-                        <div class="col-xs-12 form--div hidden">
+                        <div class="col-xs-12 form--div">
                             <div class="col-md-3">
                                 <input id="bizAddress" class="form-control" type="text" placeholder="BUSINESS ADDRESS">
                             </div>
@@ -295,21 +298,29 @@
                                 <input id="zipCode" class="form-control" type="text" placeholder="ZIP" pattern="[0-9]*" maxlength="5" required="" name="zip">
                             </div>
                         </div>
-                        <div class="contactConfirmation col-xs-8 col-xs-offset-2 hidden">
+                    </div>
+                    <div class="third-set hidden">
+                        <div class="contactConfirmation col-xs-8 col-xs-offset-2">
                             <div class="msgBox">
                                 <p>Thank you for contacting CNC.
-                                    <br>One of our associates will be contact with you shortly.</p>
+                                    <br>One of our associates will be contact with you shortly.
+                                </p>
                             </div>
                         </div>
+                    </div>
+                    <div>
                         <div class="col-xs-12 form--div enterDiv">
-                            <div class="col-xs-4 col-xs-offset-4 submit--wrapper">
+                            <div class="col-xs-4 col-xs-offset-4 enter--wrapper">
                                 <button type="button" class="enter btn btn-lg btn-primary">NEXT</button>
                             </div>
                         </div>
-                    </form>
-
+                        <div class="col-xs-12 form--div submitDiv hidden">
+                            <div class="col-xs-4 col-xs-offset-4 submit--wrapper">
+                                <button type="button" class="submit btn btn-lg btn-primary">SUBMIT</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </section>
     </div>
