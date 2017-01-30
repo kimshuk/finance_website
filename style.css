@@ -99,19 +99,19 @@
 }
 
 .inner_carouselImg-one {
-    background: url(/finance_website/assets/banner1.jpg) center center / cover no-repeat;
+    background: url(assets/banner1.jpg) center center / cover no-repeat;
 }
 
 .inner_carouselImg-two {
-    background: url(/finance_website/assets/banner2.jpg) center center / cover no-repeat;
+    background: url(assets/banner2.jpg) center center / cover no-repeat;
 }
 
 .inner_carouselImg-three {
-    background: url(/finance_website/assets/banner3.jpg) center center / cover no-repeat;
+    background: url(assets/banner3.jpg) center center / cover no-repeat;
 }
 
 .inner_carouselImg-four {
-    background: url(/finance_website/assets/banner5.jpg) center center / cover no-repeat;
+    background: url(assets/banner5.jpg) center center / cover no-repeat;
 }
 
 .inner_carouselText {
@@ -183,11 +183,29 @@
     text-align: center;
 }
 .contactConfirmation{
-    text-align: center;
+    /*text-align: center;*/
+    display: inline-flex;
+}
+.svgContainer{
+    position: relative;
+    display: inline-block;
+}
+.svgContainer svg{
+    height: 50px;
+    width: 50px;
+}
+.whiteFill{
+    fill: white;
 }
 .msgBox{
     position: relative;  
     color: white;
+    display: inline-block;
+    margin-left: 15px;
+}
+.msg{
+    font-size: 15px;
+    margin: 0;
 }
 .required{
     border:2px solid #C82828;
@@ -198,6 +216,12 @@
 }
 .hidden{
     display: none;
+}
+.email-send-loading{
+    text-align: center;
+}
+.loading-img{
+    width: 100px;
 }
 /*----------------------------info---------------------------------*/
 
@@ -335,4 +359,17 @@ a:focus {
 .section_company .company_info_wrapper {
     background-color: #f1a7a7;
     text-align: center;
+}
+.company_info_content_box{
+    background-color: white;
+    font-size: 0;
+}
+.company_info_content{
+    display: inline-block;
+}
+.info_content_wrapper{
+    display: flex;
+}
+.info_content{
+    font-size: initial;
 }
