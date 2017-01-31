@@ -53,6 +53,7 @@ jQuery(function ($) {
     $("#bizPhone").mask("(999) 999-9999");
     $("#cellPhone").mask("(999) 999-9999");
     $("#zipCode").mask("99999");
+    $('#annualSales').mask('999.999.999.999.999,99', {reverse: true});
 });
 
 function applyClick(){
