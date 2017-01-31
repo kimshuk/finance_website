@@ -1,4 +1,4 @@
-/*-------------------------Nav--------------------------------*/
+    /*-------------------------Nav--------------------------------*/
 
 * {
     font-family: montserrat;
@@ -99,19 +99,19 @@
 }
 
 .inner_carouselImg-one {
-    background: url(/finance_website/assets/banner1.jpg) center center / cover no-repeat;
+    background: url(assets/banner1.jpg) center center / cover no-repeat;
 }
 
 .inner_carouselImg-two {
-    background: url(/finance_website/assets/banner2.jpg) center center / cover no-repeat;
+    background: url(assets/banner2.jpg) center center / cover no-repeat;
 }
 
 .inner_carouselImg-three {
-    background: url(/finance_website/assets/banner3.jpg) center center / cover no-repeat;
+    background: url(assets/banner3.jpg) center center / cover no-repeat;
 }
 
 .inner_carouselImg-four {
-    background: url(/finance_website/assets/banner5.jpg) center center / cover no-repeat;
+    background: url(assets/banner5.jpg) center center / cover no-repeat;
 }
 
 .inner_carouselText {
@@ -148,10 +148,29 @@
 
 /*-------------------------Contact--------------------------------*/
 
-.section--contact {
-    background-color: #5D8F66;
+.section--contact{
+    position: relative;
+    background-color: #191919;
 }
-
+.section--contact:before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+    background-image: url(assets/beach.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 30%;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
 .contact__info__wrapper{
     padding-bottom: 30px;
 }
@@ -183,11 +202,29 @@
     text-align: center;
 }
 .contactConfirmation{
-    text-align: center;
+    /*text-align: center;*/
+    display: inline-flex;
+}
+.svgContainer{
+    position: relative;
+    display: inline-block;
+}
+.svgContainer svg{
+    height: 50px;
+    width: 50px;
+}
+.whiteFill{
+    fill: white;
 }
 .msgBox{
     position: relative;  
     color: white;
+    display: inline-block;
+    margin-left: 15px;
+}
+.msg{
+    font-size: 15px;
+    margin: 0;
 }
 .required{
     border:2px solid #C82828;
@@ -199,6 +236,12 @@
 .hidden{
     display: none;
 }
+.email-send-loading{
+    text-align: center;
+}
+.loading-img{
+    width: 100px;
+}
 /*----------------------------info---------------------------------*/
 
 .info_wrapper {
@@ -209,12 +252,12 @@
 .info_title {
     color: #448499;
     font-size: 40px;
-    font-size: 3.5em;
+    font-size: 3.1em;
     padding-top: 0.6em;
 }
 
 .info_details {
-    font-size: 18px;
+/*    font-size: 18px;*/
     font-size: 1.4em;
     padding: 1em 3em;
 }
@@ -320,7 +363,9 @@
 .padding_bottom_xl {
     padding-bottom: 3em;
 }
-
+.padding_top_md{
+    padding-top: 1em;
+}
 
 /*----------------------------link-------------------------------*/
 
@@ -335,4 +380,34 @@ a:focus {
 .section_company .company_info_wrapper {
     background-color: #f1a7a7;
     text-align: center;
+}
+.company_info_content_box{
+    margin-bottom: 3em;
+}
+.info_content{
+    font-size: 1.3em;
+}
+.info_content_wrapper{
+    text-align: left;
+/*    margin-bottom: 20px;*/
+    display: flex;
+}
+.company_info_content{
+    margin-top: 5%;
+}
+.info_content_img{
+    width: 10%;
+    display: inline-block;
+}
+.info_content_img svg{
+    width: 100%;
+    height: 100%;
+}
+.info_description{
+    display: inline-block;
+    text-align: left;
+    width: 85%;
+    font-size: 25px;
+    margin: 0;
+    margin-left: 5%;
 }
