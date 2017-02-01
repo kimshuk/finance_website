@@ -46,12 +46,14 @@ $(document).ready(function () {
 
 
 
-var firstFormSetId = ['fName', 'lName', 'bizName', 'email', 'phone'];
+var firstFormSetId = ['fName', 'lName', 'bizName', 'bizCategory',, 'email', 'bizPhone', 'cellPhone'];
 var secondFormSetId = ['timeInBiz', 'desiredAmt', 'annualSales', 'bizAddress', 'city', 'state', 'zipCode'];
 var formInputData = {};
 jQuery(function ($) {
-    $("#phone").mask("(999) 999-9999");
+    $("#bizPhone").mask("(999) 999-9999");
+    $("#cellPhone").mask("(999) 999-9999");
     $("#zipCode").mask("99999");
+    $('#annualSales').mask('999.999.999.999.999,99', {reverse: true});
 });
 
 function applyClick(){
@@ -107,7 +109,7 @@ function collectInputData(idArr){
 }
 
 //disable input form
-function diableInput(idArr){
+function disableInput(idArr){
     idArr.forEach(function(v){
         $('#'+v).attr('disabled', 'disabled');
     })
@@ -139,7 +141,7 @@ function validateFirstFormSet(){
     }else{
         console.log('forms all clear',checkForms);
         collectInputData(firstFormSetId);
-        diableInput(firstFormSetId);
+        //disableInput(firstFormSetId);
         addOrRemoveClass('enterDiv','add','hidden');
         addOrRemoveClass('second-set','remove','hidden');
         addOrRemoveClass('submitDiv','remove','hidden');
@@ -148,22 +150,28 @@ function validateFirstFormSet(){
 }
 function validateSecondFormSet(){
     clearRequiredError(secondFormSetId);
-    var checkForms = checkForEmptyInput(secondFormSetId);
-    if(checkForms){
-        console.log('incorrect forms',checkForms);
-        createRequiredFormWarning(checkForms);
+    clearRequiredError(firstFormSetId);
+    var checkForms = checkForEmptyInput(firstFormSetId);
+    var checkForms2 = checkForEmptyInput(secondFormSetId);
+    if(checkForms || checkForms2){
+        if(checkForms){
+            console.log('incorrect forms',checkForms);
+            createRequiredFormWarning(checkForms);    
+        }
+        if(checkForms2){
+            console.log('incorrect forms2',checkForms2);
+            createRequiredFormWarning(checkForms2);   
+        }
     }else{
         console.log('forms all clear',checkForms);
+        collectInputData(firstFormSetId);
         collectInputData(secondFormSetId);
-        diableInput(secondFormSetId);
+        //disableInput(secondFormSetId);
         addOrRemoveClass('step2','add','filled');
         addOrRemoveClass('submitDiv','add','hidden');
         sendMail(createTableForEmail());
         //createTableForEmail();
-        
-        addOrRemoveClass('third-set','remove','hidden');
-        addOrRemoveClass('review','add','filled');
-        addOrRemoveClass('complete','add','filled');  
+        addOrRemoveClass('loading-set','remove','hidden'); 
     }
 }
 
@@ -191,6 +199,8 @@ function sendMail(body) {
         console.log(formInputData.fName+" "+formInputData.lName);
         console.log(formInputData.email);
         console.log(body);
+        disableInput(firstFormSetId);
+        disableInput(secondFormSetId);
         $.ajax({
             method: 'post',
             url: 'mail_handler.php',
@@ -203,29 +213,26 @@ function sendMail(body) {
             success: function (response) {
                 var stringResponse = response;
                 if (stringResponse == "success") {
-                    //addThankyou();
+                    addOrRemoveClass('loading-set','add','hidden');
+                    addOrRemoveClass('third-set','remove','hidden');
+                    addOrRemoveClass('complete','add','filled'); 
                     console.log(stringResponse);
                 } else {
-                    //addErrorMsg();
+                    addOrRemoveClass('loading-set','add','hidden');
+                    addOrRemoveClass('third-set-error','remove','hidden');
+                    addOrRemoveClass('complete','add','filled');
                     console.log(stringResponse);
                 }
             },
             error: function (response) {
                 console.log(response, 'your ajax failed');
-                //addErrorMsg();
+                addOrRemoveClass('loading-set','add','hidden');
+                addOrRemoveClass('third-set-error','remove','hidden');
+                addOrRemoveClass('complete','add','filled');
             }
         })
 }
 
-function addThankyou() {
-    var thankYouDiv = $('<div id="thankyou">').html("Thank You. <br> Message has been sent.");
-    $('#sendingGifContainer').append(thankYouDiv);
-}
-
-function addErrorMsg() {
-    var errorMsg = $('<div id="errorMsg">').text("Message was not successful");
-    $('#sendingGifContainer').append(errorMsg);
-}
 
 //Nav JS
 
