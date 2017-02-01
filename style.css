@@ -157,7 +157,7 @@
     position: relative;
     background-color: #191919;
 }
-.section--contact:before{
+.section--contact:after{
     content: ' ';
     display: block;
     position: absolute;
@@ -165,7 +165,6 @@
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
     opacity: 0.3;
     background-image: url(assets/beach.jpg);
     background-repeat: no-repeat;
@@ -257,7 +256,12 @@
 .loading-img{
     width: 100px;
 }
-
+.contactForm{
+    z-index: 10;
+}
+.first-set div, .second-set div{
+    margin-bottom: 5px;
+}
 /*----------------------------info---------------------------------*/
 
 .info_wrapper {
