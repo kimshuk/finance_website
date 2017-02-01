@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="node_modules/remodal/dist/remodal-default-theme.css">
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".section--navigation" data-offset="300">
     <div class="remodal-bg">
         <!--Nav--Asset-->
         <div class="nav-wrapper">
@@ -30,9 +30,9 @@
                             <li class="nav__item"><img class="nav__item__img" src="assets/sample_logo.png" alt="logo"></li>
                             <li class="nav__item nav__item--right">
                                 <ul class="navigation">
-                                    <li class="nav__item"><a href="#" class="btm_nav__item--link">About Us</a></li>
-                                    <li class="nav__item"><a href="#" class="btm_nav__item--link">Service1</a></li>
-                                    <li class="nav__item"><a href="#" class="btm_nav__item--link ">Service2</a></li>
+                                    <li class="nav__item"><a href="#about_company" class="btm_nav__item--link">About  CNC</a></li>
+                                    <li class="nav__item"><a href="#products" class="btm_nav__item--link">Service1</a></li>
+                                    <li class="nav__item"><a href="#contact_us" class="btm_nav__item--link ">Service2</a></li>
                                 </ul>
                             </li>
                         </div>
@@ -101,7 +101,7 @@
             </a>
         </div>
         <!--Company Info-->
-        <section class="section_company">
+        <section class="section_company" id="about_company">
             <div class="company_info_wrapper">
                 <div class="container">
                     <div class="row">
@@ -193,33 +193,25 @@
             </div>
         </section>
         <!--Product Info-->
-
-        <section class="section_product">
+        <section class="section_product" id="products">
             <div class="info_wrapper">
                 <div class="container">
                     <div class="row box">
                         <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-                            <h1 class="info_title">Info Title</h1>
-                            <p class="info_details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque debitis dolor harum. Velit et, rerum!</p>
+                            <h1 class="info_title">CNC Products</h1>
+                            <p class="info_details">CNC Rich Group provides working capital to all types of business including restaurant, and retailers</p>
                         </div>
                     </div>
                     <div class="row box">
                         <div class="col-xs-6 cards">
                             <a href="#modalOne">
                                 <div class="cards_wrapper">
-                                    <div class="cards_header" data-legend="FIXED">
-                                        <h1 class="cards_num">30</h1>
-                                        <h1 class="cards_year">YEAR</h1>
+                                    <div class="cards_header cards-background-one" data-legend="FLEXIBLE PAY">
+                                        <h1 class="cards_year">Merchant Cash Advance</h1>
                                     </div>
                                     <div class="cards_content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        <div class="cards_rate">
-                                            <p class="rate_num">2.345% <span class="rate_text">RATE</span></p>
-                                        </div>
-                                        <div class="cards_apr margin_top">
-                                            <p class="apr_num">1.234% <span class="apr_text">APR</span></p>
-                                        </div>
-                                        <div class="btn btn-success cards_btn margin_top">Apply</div>
+                                        <p>Flexible Payments, Quick Funds, Smooth Business</p>
+                                        <div class="btn btn-success cards_btn margin_top">Learn More</div>
                                     </div>
                                 </div>
                             </a>
@@ -227,19 +219,12 @@
                         <div class="col-xs-6 cards">
                             <a href="#modalTwo">
                                 <div class="cards_wrapper">
-                                    <div class="cards_header" data-legend="FIXED">
-                                        <h1 class="cards_num">30</h1>
-                                        <h1 class="cards_year">YEAR</h1>
+                                    <div class="cards_header cards-background-two" data-legend="HIGH ARPPOVAL">
+                                        <h1 class="cards_year">Business Loan</h1>
                                     </div>
                                     <div class="cards_content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        <div class="cards_rate">
-                                            <p class="rate_num">2.345% <span class="rate_text">RATE</span></p>
-                                        </div>
-                                        <div class="cards_apr margin_top">
-                                            <p class="apr_num">1.234% <span class="apr_text">APR</span></p>
-                                        </div>
-                                        <div class="btn btn-success cards_btn margin_top">Apply</div>
+                                        <p>Big Funds to Boost Your Business, Fast and High Rate Apporve</p>
+                                        <div class="btn btn-success cards_btn margin_top">Learn More</div>
                                     </div>
                                 </div>
                             </a>
@@ -247,7 +232,7 @@
                     </div>
                     <div class="row box">
                         <div class="col-md-8 col-md-offset-2">
-                            <p class="padding_top_xl padding_bottom_xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, tempora.</p>
+                            <p class="padding_top_xl padding_bottom_xl">Conditions may vary. Your loan agreement will identify the loan issuer prior to your signing.</p>
                         </div>
                     </div>
                 </div>
@@ -257,7 +242,7 @@
         <!--Modal dialog-->
         <div class="remodal" data-remodal-id="modalOne">
             <button class="remodal-close" data-remodal-action="close"></button>
-            <h1>Credit Card </h1>
+            <h1>Credit Card</h1>
             <p></p>
             <p>Owner's credit score: Min 600</p>
             <p>Funding typically available in 5 days or less</p>
@@ -276,13 +261,14 @@
             <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
         </div>
         <!--Contact-->
-        <section class="section--contact">
+        <section class="section--contact" id="contact_us">
             <div class="container contact__info__wrapper">
                 <div class="text__wrapper row statusBar">
                     <div class="col-md-8 col-md-offset-2 statusBar">
                         <div class="step col-sm-4 filled step1">STEP1</div>
                         <div class="step col-sm-4 step2">STEP2</div>
                         <div class="step col-sm-4 complete">COMPLETE</div>
+
                     </div>
                 </div>
                 <div class="text__wrapper row contactHeader">

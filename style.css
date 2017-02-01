@@ -1,8 +1,13 @@
-    /*-------------------------Nav--------------------------------*/
+
+/*-------------------------Nav--------------------------------*/
+
 
 * {
     font-family: montserrat;
 }
+
+
+/*-------------------------Nav--------------------------------*/
 
 .nav-wrapper {
     position: fixed;
@@ -171,10 +176,12 @@
     -webkit-background-size: cover;
     background-size: cover;
 }
-.contact__info__wrapper{
+
+.contact__info__wrapper {
     padding-bottom: 30px;
 }
-.text__wrapper{
+
+.text__wrapper {
     text-align: center;
     color: white;
 }
@@ -188,7 +195,8 @@
     border: 1px solid white;
     border-radius: 5px;
 }
-.statusBar .filled{
+
+.statusBar .filled {
     border: 1px solid #337ab7;
     border-radius: 5px;
     background-color: #2e6da4;
@@ -198,9 +206,11 @@
     margin: 1em 0;
 }
 
-.submit--wrapper, .enter--wrapper{
+.submit--wrapper,
+.enter--wrapper {
     text-align: center;
 }
+
 .contactConfirmation{
     /*text-align: center;*/
     display: inline-flex;
@@ -216,8 +226,9 @@
 .whiteFill{
     fill: white;
 }
-.msgBox{
-    position: relative;  
+
+.msgBox {
+    position: relative;
     color: white;
     display: inline-block;
     margin-left: 15px;
@@ -226,22 +237,27 @@
     font-size: 15px;
     margin: 0;
 }
-.required{
-    border:2px solid #C82828;
+
+.required {
+    border: 2px solid #C82828;
     border-bottom: 6px solid #C82828;
 }
-.errorMsg{
+
+.errorMsg {
     color: #C82828;
 }
-.hidden{
+
+.hidden {
     display: none;
 }
+
 .email-send-loading{
     text-align: center;
 }
 .loading-img{
     width: 100px;
 }
+
 /*----------------------------info---------------------------------*/
 
 .info_wrapper {
@@ -272,7 +288,14 @@
 .cards_header {
     min-height: 100px;
     color: #ffffff;
-    background-color: #8ec3d4;
+}
+
+.cards-background-one {
+    background: #8ec3d4 url('assets/calculator.jpg') no-repeat center;
+}
+
+.cards-background-two {
+    background: #8ec3d4 url('assets/merchant.jpg') no-repeat center;
 }
 
 .cards_header:after {
@@ -296,23 +319,17 @@
     transform: scale(1.05);
 }
 
-.cards_num {
-    margin: 0;
-    font-weight: bold;
-    font-size: 8em;
-    font-size: 80px;
-    padding-top: 0.25em;
-}
-
 .cards_year {
     font-size: 3em;
     font-size: 30px;
+    font-weight: bold;
+    padding-top: 2em;
     margin: 0;
 }
 
 .cards_content {
     color: #000000;
-    padding: 2em 1em;
+    padding: 4em 1em 2em;
 }
 
 .cards_rate {
@@ -325,7 +342,6 @@
 }
 
 .cards_btn {
-    border-radius: 16px;
     background-color: #71a354;
     text-transform: uppercase;
 }
