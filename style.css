@@ -4,6 +4,10 @@
     font-family: montserrat;
 }
 
+body {
+    position: relative;
+}
+
 
 /*-------------------------Nav--------------------------------*/
 
