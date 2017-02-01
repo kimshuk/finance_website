@@ -262,6 +262,17 @@
 .first-set div, .second-set div{
     margin-bottom: 5px;
 }
+.input-currency-wrapper{
+    display: flex;
+}
+.input-group-addon{
+    width: 20px;
+    padding: 9px 6px;
+    border: 0;
+}
+#annualSales{
+    border-radius: 0 4px 4px 0;
+}
 /*----------------------------info---------------------------------*/
 
 .info_wrapper {
