@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to CNC Rich Group</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -263,10 +264,10 @@
         <section class="section--contact" id="contact_us">
             <div class="container contact__info__wrapper">
                 <div class="text__wrapper row statusBar">
-                    <div class="col-md-8 col-md-offset-2 statusBar">
-                        <div class="step col-sm-4 filled step1">STEP1</div>
-                        <div class="step col-sm-4 step2">STEP2</div>
-                        <div class="step col-sm-4 complete">COMPLETE</div>
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 statusBar">
+                        <div class="step col-xs-4 filled step1">STEP1</div>
+                        <div class="step col-xs-4 step2">STEP2</div>
+                        <div class="step col-xs-4 complete">COMPLETE</div>
 
                     </div>
                 </div>
@@ -277,18 +278,18 @@
                     </div>
                 </div>
                 <div class="form__wrapper row contactForm">
-                    <div class="first-set">
+                    <div class="first-set row">
                         <div class="col-xs-12 form--div">
-                            <div class="col-md-3">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3">
                                 <input class="form-control" id="fName" type="text" name="name" placeholder="FIRST NAME">
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3">
                                 <input class="form-control" id="lName" type="text" name="name" placeholder="LAST NAME">
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3">
                                 <input class="form-control" id="bizName" type="text" name="businessName" placeholder="BUSINESS NAME">
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-3">
                                 <select id="bizCategory" class="form-control" form="inputSet">
                                     <option value="" disabled="" selected="">BUSINESS CATEORY</option>
                                     <option value="AUTO REPAIR">AUTO REPAIR</option>
@@ -303,20 +304,20 @@
                             </div>
                         </div>
                         <div class="col-xs-12 form--div">
-                            <div class="col-md-6">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6">
                                 <input class="form-control" id="email" type="text" name="email" placeholder="EMAIL">
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3">
                                 <input class="form-control" id="bizPhone" type="tel" name="biz_phone_number" placeholder="BUSINESS PHONE">
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3">
                                 <input class="form-control" id="cellPhone" type="tel" name="cell_phone_number" placeholder="CELL PHONE">
                             </div>
                         </div>
                     </div>
-                    <div class="second-set hidden">
+                    <div class="second-set row hidden">
                         <div class="col-xs-12 form--div">
-                            <div class="col-md-3">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3">
                                 <select id="timeInBiz" class="form-control" form="inputSet">
                                     <option value="" disabled="" selected="">TIME IN BUSINESS</option>
                                     <option value="10 years or longer">10 years or longer</option>
@@ -327,7 +328,7 @@
                                     <option value="less than 6 months">less than 6 months</option>
                                 </select>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3">
                                 <select id="desiredAmt" class="form-control" form="inputSet">
                                     <option value="" disabled="" selected="">LOAN AMOUNT</option>
                                     <option value="$500,000+">$500,000+</option>
@@ -338,32 +339,35 @@
                                     <option value="Unknown">Not Sure Yet</option>
                                 </select>
                             </div>
-                            <div class="col-md-3">
-                                <input id="annualSales" class="form-control" type="text" placeholder="ANNUAL GROSS SALES">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3">
+                                <div class="input-currency-wrapper">
+                                    <span class="input-group-addon">$</span>
+                                    <input id="annualSales" class="form-control" type="text" placeholder="ANNUAL GROSS SALES">    
+                                </div>
                             </div>
                         </div>
                         <div class="col-xs-12 form--div">
-                            <div class="col-md-3">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3">
                                 <input id="bizAddress" class="form-control" type="text" placeholder="BUSINESS ADDRESS">
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3">
                                 <input id="city" class="form-control" type="text" placeholder="CITY">
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3">
                                 <input id="state" class="form-control" type="text" placeholder="STATE">
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3">
                                 <input id="zipCode" class="form-control" type="text" placeholder="ZIP" pattern="[0-9]*" maxlength="5" required="" name="zip">
                             </div>
                         </div>
                     </div>
-                    <div class="loading-set hidden">
+                    <div class="loading-set row hidden">
                         <div class="email-send-loading col-xs-4 col-xs-offset-4">
                             <img class="loading-img" src="assets/loading.gif" alt="loading">
                         </div>
                     </div>
                     <div class="third-set hidden">
-                        <div class="contactConfirmation col-xs-5 col-xs-offset-4">
+                        <div class="contactConfirmation col-xs-12 col-sm-5 col-sm-offset-4">
                             <div class="svgContainer">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
                                     <path class="whiteFill" d="M9.984 17.016l9-9-1.406-1.453-7.594 7.594-3.563-3.563-1.406 1.406zM12 2.016c5.531 0 9.984 4.453 9.984 9.984s-4.453 9.984-9.984 9.984-9.984-4.453-9.984-9.984 4.453-9.984 9.984-9.984z"></path>
@@ -376,8 +380,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="third-set-error hidden">
-                        <div class="contactConfirmation col-xs-5 col-xs-offset-4">
+                    <div class="third-set-error row hidden">
+                        <div class="contactConfirmation col-xs-12 col-sm-5 col-sm-offset-4">
                             <div class="svgContainer">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
                                     <path class="whiteFill" d="M12.984 12.984v-6h-1.969v6h1.969zM12.984 17.016v-2.016h-1.969v2.016h1.969zM12 2.016c5.531 0 9.984 4.453 9.984 9.984s-4.453 9.984-9.984 9.984-9.984-4.453-9.984-9.984 4.453-9.984 9.984-9.984z"></path>
@@ -405,7 +409,7 @@
                 </div>
             </div>
         </section>
-    </div>
+    </div>  
     <footer>Copyright &copy 2017 CNC RICH GROUP LLC.</footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="./node_modules/remodal/dist/remodal.min.js"></script>
@@ -414,7 +418,7 @@
     <script src="scroll.js"></script>
     <script src="jquery.maskedinput.js"></script>
     <script src="modal.js"></script>
-    <script src="https://cdnjs.com/libraries/jquery.mask"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js"></script>
 </body>
 
 </html>
