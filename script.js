@@ -46,14 +46,20 @@ $(document).ready(function () {
 
 
 
-var firstFormSetId = ['fName', 'lName', 'bizName', 'bizCategory',, 'email', 'bizPhone', 'cellPhone'];
+var firstFormSetId = ['fName', 'lName', 'bizName', 'bizCategory', 'bizPhone', 'cellPhone'];
 var secondFormSetId = ['timeInBiz', 'desiredAmt', 'annualSales', 'bizAddress', 'city', 'state', 'zipCode'];
+var email = ['email'];
+
 var formInputData = {};
 jQuery(function ($) {
     $("#bizPhone").mask("(999) 999-9999");
     $("#cellPhone").mask("(999) 999-9999");
     $("#zipCode").mask("99999");
     $('#annualSales').mask("#,##0.00", {reverse: true});
+    $('#fName').mask("Z",{'translation':{Z: {pattern: /[a-zA-Z*]/, recursive:true}}});
+    $('#lName').mask("Z",{'translation':{Z: {pattern: /[a-zA-Z*]/, recursive:true}}});
+    $('#city').mask("Z",{'translation':{Z: {pattern: /[a-zA-Z*]/, recursive:true}}});
+    $('#state').mask("Z",{'translation':{Z: {pattern: /[a-zA-Z*]/, recursive:true}}});
 });
 
 function applyClick(){
@@ -66,6 +72,8 @@ function applyClick(){
     
 }
 
+
+//{translation: {'Z': { pattern: /\S/, optional: true, recursive: true}},maxlength: false}
 
 
 //checks for empty inputs based on ids
@@ -132,12 +140,30 @@ function addOrRemoveClass(targetElement,action,className){
     }
 }
 
+function isEmail(email) {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  if(!regex.test(email)){
+      return ['email'];
+  }else{
+      return false;
+  }
+}
+
 function validateFirstFormSet(){
     clearRequiredError(firstFormSetId);
+    clearRequiredError(email);
     var checkForms = checkForEmptyInput(firstFormSetId);
-    if(checkForms){
-        console.log('incorrect forms',checkForms);
-        createRequiredFormWarning(checkForms);
+    var emailCheck = isEmail($('#'+email).val());
+    
+    if(checkForms || emailCheck){
+        if(checkForms){
+            console.log('incorrect forms',checkForms);    
+            createRequiredFormWarning(checkForms);    
+        }
+        if(emailCheck){
+            console.log('incorrect forms',emailCheck);
+            createRequiredFormWarning(emailCheck);    
+        }
     }else{
         console.log('forms all clear',checkForms);
         collectInputData(firstFormSetId);
@@ -151,9 +177,11 @@ function validateFirstFormSet(){
 function validateSecondFormSet(){
     clearRequiredError(secondFormSetId);
     clearRequiredError(firstFormSetId);
+    clearRequiredError(email);
     var checkForms = checkForEmptyInput(firstFormSetId);
     var checkForms2 = checkForEmptyInput(secondFormSetId);
-    if(checkForms || checkForms2){
+    var emailCheck = isEmail($('#'+email).val());
+    if(checkForms || checkForms2 || emailCheck){
         if(checkForms){
             console.log('incorrect forms',checkForms);
             createRequiredFormWarning(checkForms);    
@@ -161,6 +189,10 @@ function validateSecondFormSet(){
         if(checkForms2){
             console.log('incorrect forms2',checkForms2);
             createRequiredFormWarning(checkForms2);   
+        }
+        if(emailCheck){
+            console.log('incorrect forms',emailCheck);
+            createRequiredFormWarning(emailCheck);    
         }
     }else{
         console.log('forms all clear',checkForms);
