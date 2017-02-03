@@ -1,4 +1,4 @@
-/*-------------------------Nav--------------------------------*/
+/*-------------------------wrapper--------------------------------*/
 
 * {
     font-family: montserrat;
@@ -6,6 +6,31 @@
 
 body {
     position: relative;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.remodal.wrapper-size {
+    max-width: 1000px;
+}
+
+
+/*----------------------------color-----------------------------*/
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+    background-color: #C4D7ED;
+}
+
+.table-striped > tbody > tr:nth-child(2n) > td,
+.table-striped > tbody > tr:nth-child(2n) > th {
+    background-color: #C4D7ED;
+}
+
+.dark-blue {
+    color: #183152;
 }
 
 
@@ -300,7 +325,7 @@ body {
 }
 
 .info_title {
-    color: #448499;
+    color: #183152;
     font-size: 40px;
     font-size: 3.1em;
     padding-top: 0.6em;
@@ -325,18 +350,18 @@ body {
 }
 
 .cards-background-one {
-    background: #8ec3d4 url('assets/calculator.jpg') no-repeat center;
+    background: #8ec3d4 url('assets/calculator-darken.jpeg') no-repeat center;
 }
 
 .cards-background-two {
-    background: #8ec3d4 url('assets/merchant.jpg') no-repeat center;
+    background: #8ec3d4 url('assets/merchant-darken.jpg') no-repeat center;
 }
 
 .cards_header:after {
     font-size: 18px;
     font-size: 1.2em;
     display: inline-block;
-    background-color: #448499;
+    background-color: #183152;
     content: attr(data-legend);
     position: relative;
     top: 1.4em;
@@ -469,4 +494,16 @@ a:focus {
     font-size: 25px;
     margin: 0;
     margin-left: 5%;
+}
+
+
+/*--------------------------table--------------------------------*/
+
+td:first-child {
+    text-align: left;
+    width: 11em;
+}
+
+td {
+    border-right: 3px solid #fff;
 }
