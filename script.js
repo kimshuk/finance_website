@@ -18,30 +18,30 @@ $(document).ready(function () {
 //else
 //save 2nd set of inputs, 
 //disable 2nd input set
-        
-        //show review page
-        //if confirm clicked
-            //send email
-                //stringify collected obj form data and make it body
-                //use name email and body and call ajax
-            //show confirmation
-                //either failed or successful
-            //reset the forms
-        //else
-            //allow edit which ever edit button clicked - edit img on the form
-            //once changed and confirm clicked,
-            //validate the form
-                //if okay,
-                    //send email
-                        //stringify collected obj form data and make it body
-                        //use name email and body and call ajax
-                    //show confirmation
-                        //either failed or successful
-                    //show confirmation
-                    //reset the forms
-                //else
-                    //show error
-                    //return
+
+//show review page
+//if confirm clicked
+//send email
+//stringify collected obj form data and make it body
+//use name email and body and call ajax
+//show confirmation
+//either failed or successful
+//reset the forms
+//else
+//allow edit which ever edit button clicked - edit img on the form
+//once changed and confirm clicked,
+//validate the form
+//if okay,
+//send email
+//stringify collected obj form data and make it body
+//use name email and body and call ajax
+//show confirmation
+//either failed or successful
+//show confirmation
+//reset the forms
+//else
+//show error
+//return
 
 
 
@@ -55,21 +55,51 @@ jQuery(function ($) {
     $("#bizPhone").mask("(999) 999-9999");
     $("#cellPhone").mask("(999) 999-9999");
     $("#zipCode").mask("99999");
-    $('#annualSales').mask("#,##0.00", {reverse: true});
-    $('#fName').mask("Z",{'translation':{Z: {pattern: /[a-zA-Z*]/, recursive:true}}});
-    $('#lName').mask("Z",{'translation':{Z: {pattern: /[a-zA-Z*]/, recursive:true}}});
-    $('#city').mask("Z",{'translation':{Z: {pattern: /[a-zA-Z*]/, recursive:true}}});
-    $('#state').mask("Z",{'translation':{Z: {pattern: /[a-zA-Z*]/, recursive:true}}});
+    $('#annualSales').mask("#,##0.00", {
+        reverse: true
+    });
+    $('#fName').mask("Z", {
+        'translation': {
+            Z: {
+                pattern: /[a-zA-Z*]/,
+                recursive: true
+            }
+        }
+    });
+    $('#lName').mask("Z", {
+        'translation': {
+            Z: {
+                pattern: /[a-zA-Z*]/,
+                recursive: true
+            }
+        }
+    });
+    $('#city').mask("Z", {
+        'translation': {
+            Z: {
+                pattern: /[a-zA-Z*]/,
+                recursive: true
+            }
+        }
+    });
+    $('#state').mask("Z", {
+        'translation': {
+            Z: {
+                pattern: /[a-zA-Z*]/,
+                recursive: true
+            }
+        }
+    });
 });
 
-function applyClick(){
-    $('.enter').click(function(){
+function applyClick() {
+    $('.enter').click(function () {
         validateFirstFormSet();
     });
-    $('.submit').click(function(){
+    $('.submit').click(function () {
         validateSecondFormSet();
     })
-    
+
 }
 
 
@@ -109,115 +139,116 @@ function clearRequiredError(idArr) {
 }
 
 //collect input data
-function collectInputData(idArr){
-    idArr.forEach(function(v){
-        formInputData[v] = $('#'+v).val();
+function collectInputData(idArr) {
+    idArr.forEach(function (v) {
+        formInputData[v] = $('#' + v).val();
     })
-    console.log('form input data inserted into the object',formInputData);
+    console.log('form input data inserted into the object', formInputData);
 }
 
 //disable input form
-function disableInput(idArr){
-    idArr.forEach(function(v){
-        $('#'+v).attr('disabled', 'disabled');
+function disableInput(idArr) {
+    idArr.forEach(function (v) {
+        $('#' + v).attr('disabled', 'disabled');
     })
 }
 
 //hides an element
-function hideElement(className){
-    $('.'+className).addClass('hidden');
+function hideElement(className) {
+    $('.' + className).addClass('hidden');
 }
 //show hidden element
-function showHiddenElement(className){
-    $('.'+className).removeClass('hidden');
+function showHiddenElement(className) {
+    $('.' + className).removeClass('hidden');
 }
 
-function addOrRemoveClass(targetElement,action,className){
-    if(action == "add"){
-        $('.'+targetElement).addClass(className);
-    }else{
-        $('.'+targetElement).removeClass(className);
+function addOrRemoveClass(targetElement, action, className) {
+    if (action == "add") {
+        $('.' + targetElement).addClass(className);
+    } else {
+        $('.' + targetElement).removeClass(className);
     }
 }
 
 function isEmail(email) {
-  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  if(!regex.test(email)){
-      return ['email'];
-  }else{
-      return false;
-  }
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if (!regex.test(email)) {
+        return ['email'];
+    } else {
+        return false;
+    }
 }
 
-function validateFirstFormSet(){
+function validateFirstFormSet() {
     clearRequiredError(firstFormSetId);
     clearRequiredError(email);
     var checkForms = checkForEmptyInput(firstFormSetId);
-    var emailCheck = isEmail($('#'+email).val());
-    
-    if(checkForms || emailCheck){
-        if(checkForms){
-            console.log('incorrect forms',checkForms);    
-            createRequiredFormWarning(checkForms);    
+    var emailCheck = isEmail($('#' + email).val());
+
+    if (checkForms || emailCheck) {
+        if (checkForms) {
+            console.log('incorrect forms', checkForms);
+            createRequiredFormWarning(checkForms);
         }
-        if(emailCheck){
-            console.log('incorrect forms',emailCheck);
-            createRequiredFormWarning(emailCheck);    
+        if (emailCheck) {
+            console.log('incorrect forms', emailCheck);
+            createRequiredFormWarning(emailCheck);
         }
-    }else{
-        console.log('forms all clear',checkForms);
+    } else {
+        console.log('forms all clear', checkForms);
         collectInputData(firstFormSetId);
         //disableInput(firstFormSetId);
-        addOrRemoveClass('enterDiv','add','hidden');
-        addOrRemoveClass('second-set','remove','hidden');
-        addOrRemoveClass('submitDiv','remove','hidden');
-        addOrRemoveClass('step2','add','filled');
+        addOrRemoveClass('enterDiv', 'add', 'hidden');
+        addOrRemoveClass('second-set', 'remove', 'hidden');
+        addOrRemoveClass('submitDiv', 'remove', 'hidden');
+        addOrRemoveClass('step2', 'add', 'filled');
     }
 }
-function validateSecondFormSet(){
+
+function validateSecondFormSet() {
     clearRequiredError(secondFormSetId);
     clearRequiredError(firstFormSetId);
     clearRequiredError(email);
     var checkForms = checkForEmptyInput(firstFormSetId);
     var checkForms2 = checkForEmptyInput(secondFormSetId);
-    var emailCheck = isEmail($('#'+email).val());
-    if(checkForms || checkForms2 || emailCheck){
-        if(checkForms){
-            console.log('incorrect forms',checkForms);
-            createRequiredFormWarning(checkForms);    
+    var emailCheck = isEmail($('#' + email).val());
+    if (checkForms || checkForms2 || emailCheck) {
+        if (checkForms) {
+            console.log('incorrect forms', checkForms);
+            createRequiredFormWarning(checkForms);
         }
-        if(checkForms2){
-            console.log('incorrect forms2',checkForms2);
-            createRequiredFormWarning(checkForms2);   
+        if (checkForms2) {
+            console.log('incorrect forms2', checkForms2);
+            createRequiredFormWarning(checkForms2);
         }
-        if(emailCheck){
-            console.log('incorrect forms',emailCheck);
-            createRequiredFormWarning(emailCheck);    
+        if (emailCheck) {
+            console.log('incorrect forms', emailCheck);
+            createRequiredFormWarning(emailCheck);
         }
-    }else{
-        console.log('forms all clear',checkForms);
+    } else {
+        console.log('forms all clear', checkForms);
         collectInputData(firstFormSetId);
         collectInputData(secondFormSetId);
         //disableInput(secondFormSetId);
-        addOrRemoveClass('step2','add','filled');
-        addOrRemoveClass('submitDiv','add','hidden');
+        addOrRemoveClass('step2', 'add', 'filled');
+        addOrRemoveClass('submitDiv', 'add', 'hidden');
         sendMail(createTableForEmail());
         //createTableForEmail();
-        addOrRemoveClass('loading-set','remove','hidden'); 
+        addOrRemoveClass('loading-set', 'remove', 'hidden');
     }
 }
 
-function createTableForEmail(){
-    var tableStart = '<table>'; 
+function createTableForEmail() {
+    var tableStart = '<table>';
     var tableEnd = '</table>';
     var trStart = '<tr><td>';
     var td = '</td><td>';
-    var trEnd = '</td></tr>';    
-    for(data in formInputData){
-        tableStart += trStart+data+td+formInputData[data]+trEnd
+    var trEnd = '</td></tr>';
+    for (data in formInputData) {
+        tableStart += trStart + data + td + formInputData[data] + trEnd
     }
     tableStart += tableEnd;
-    return(tableStart)
+    return (tableStart)
 }
 
 
@@ -228,41 +259,41 @@ function createTableForEmail(){
 
 
 function sendMail(body) {
-        console.log(formInputData.fName+" "+formInputData.lName);
-        console.log(formInputData.email);
-        console.log(body);
-        disableInput(firstFormSetId);
-        disableInput(secondFormSetId);
-        $.ajax({
-            method: 'post',
-            url: 'mail_handler.php',
-            type: 'json',
-            data: {
-                name: formInputData.fName+" "+formInputData.lName,
-                email: formInputData.email,
-                body: body
-            },
-            success: function (response) {
-                var stringResponse = response;
-                if (stringResponse == "success") {
-                    addOrRemoveClass('loading-set','add','hidden');
-                    addOrRemoveClass('third-set','remove','hidden');
-                    addOrRemoveClass('complete','add','filled'); 
-                    console.log(stringResponse);
-                } else {
-                    addOrRemoveClass('loading-set','add','hidden');
-                    addOrRemoveClass('third-set-error','remove','hidden');
-                    addOrRemoveClass('complete','add','filled');
-                    console.log(stringResponse);
-                }
-            },
-            error: function (response) {
-                console.log(response, 'your ajax failed');
-                addOrRemoveClass('loading-set','add','hidden');
-                addOrRemoveClass('third-set-error','remove','hidden');
-                addOrRemoveClass('complete','add','filled');
+    console.log(formInputData.fName + " " + formInputData.lName);
+    console.log(formInputData.email);
+    console.log(body);
+    disableInput(firstFormSetId);
+    disableInput(secondFormSetId);
+    $.ajax({
+        method: 'post',
+        url: 'mail_handler.php',
+        type: 'json',
+        data: {
+            name: formInputData.fName + " " + formInputData.lName,
+            email: formInputData.email,
+            body: body
+        },
+        success: function (response) {
+            var stringResponse = response;
+            if (stringResponse == "success") {
+                addOrRemoveClass('loading-set', 'add', 'hidden');
+                addOrRemoveClass('third-set', 'remove', 'hidden');
+                addOrRemoveClass('complete', 'add', 'filled');
+                console.log(stringResponse);
+            } else {
+                addOrRemoveClass('loading-set', 'add', 'hidden');
+                addOrRemoveClass('third-set-error', 'remove', 'hidden');
+                addOrRemoveClass('complete', 'add', 'filled');
+                console.log(stringResponse);
             }
-        })
+        },
+        error: function (response) {
+            console.log(response, 'your ajax failed');
+            addOrRemoveClass('loading-set', 'add', 'hidden');
+            addOrRemoveClass('third-set-error', 'remove', 'hidden');
+            addOrRemoveClass('complete', 'add', 'filled');
+        }
+    })
 }
 
 
@@ -277,3 +308,9 @@ function stickyNav() {
         secNav.removeClass('nav__main-sticky');
     }
 }
+
+// Modal js
+
+$('[data-remodal-id="modalOne"], [data-remodal-id="modalTwo"]').remodal({
+    modifier: 'wrapper-size'
+});
