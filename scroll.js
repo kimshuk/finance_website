@@ -1,10 +1,12 @@
 var offsetHeight = 110;
 
 $(document).ready(function () {
+    // Reset scroll
+    $('body').scrollTop(0);
 
     // Add scrollspy to <body>
     $('body').scrollspy({
-        target: ".section--navigation",
+        target: "body",
         offset: offsetHeight
     });
 

@@ -1,5 +1,5 @@
 
-/*-------------------------Nav--------------------------------*/
+/*-------------------------wrapper--------------------------------*/
 * {
     font-family: montserrat;
 }
@@ -7,10 +7,31 @@
 body {
     position: relative;
 }
+.text-center {
+    text-align: center;
+}
+
+.remodal.wrapper-size {
+    max-width: 1000px;
+}
+/*----------------------------color-----------------------------*/
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+    background-color: #C4D7ED;
+}
+
+.table-striped > tbody > tr:nth-child(2n) > td,
+.table-striped > tbody > tr:nth-child(2n) > th {
+    background-color: #C4D7ED;
+}
+
+.dark-blue {
+    color: #183152;
+}
 /*-------------------------Nav--------------------------------*/
 .nav-wrapper {
     position: fixed;
-    z-index: 11;
+    z-index: 9999;
     width: 100vw;
     box-shadow: 0px 2px 11px 4px rgba(0, 0, 0, 0.35);
     height: 3em;
@@ -127,11 +148,12 @@ body {
     transform: translateY(-50%);
 }
 /*-------------------------Contact--------------------------------*/
-.section--contact{
+.section--contact {
     position: relative;
     background-color: #191919;
 }
-.section--contact:after{
+
+.section--contact:after {
     content: ' ';
     display: block;
     position: absolute;
@@ -176,19 +198,22 @@ body {
 .enter--wrapper {
     text-align: center;
 }
-.contactConfirmation{
+.contactConfirmation {
     /*text-align: center;*/
     display: inline-flex;
 }
-.svgContainer{
+
+.svgContainer {
     position: relative;
     display: inline-block;
 }
-.svgContainer svg{
+
+.svgContainer svg {
     height: 50px;
     width: 50px;
 }
-.whiteFill{
+
+.whiteFill {
     fill: white;
 }
 .msgBox {
@@ -197,7 +222,8 @@ body {
     display: inline-block;
     margin-left: 15px;
 }
-.msg{
+
+.msg {
     font-size: 15px;
     margin: 0;
 }
@@ -213,26 +239,37 @@ body {
     display: none;
 }
 
-.email-send-loading{
+.email-send-loading {
     text-align: center;
 }
-.loading-img{
+
+.loading-img {
     width: 100px;
 }
-.contactForm{
+
+.contactForm {
     z-index: 10;
 }
-.first-set div, .second-set div{
+
+.first-set div,
+.second-set div {
     margin-bottom: 5px;
 }
-.input-currency-wrapper{
+
+.input-currency-wrapper {
     display: flex;
 }
-.input-group-addon{
+
+.input-group-addon {
     width: 20px;
     padding: 9px 6px;
     border: 0;
 }
+/*
+#annualSales{
+    border-radius: 0 4px 4px 0;
+}
+*/
 /*----------------------------info---------------------------------*/
 
 .info_wrapper {
@@ -242,7 +279,7 @@ body {
 }
 
 .info_title {
-    color: #448499;
+    color: #183152;
     font-size: 40px;
     font-size: 3.1em;
     padding-top: 0.6em;
@@ -261,16 +298,16 @@ body {
     color: #ffffff;
 }
 .cards-background-one {
-    background: #8ec3d4 url('assets/calculator.jpg') no-repeat center;
+    background: #8ec3d4 url('assets/calculator-darken.jpeg') no-repeat center;
 }
 .cards-background-two {
-    background: #8ec3d4 url('assets/merchant.jpg') no-repeat center;
+    background: #8ec3d4 url('assets/merchant-darken.jpg') no-repeat center;
 }
 .cards_header:after {
     font-size: 18px;
     font-size: 1.2em;
     display: inline-block;
-    background-color: #448499;
+    background-color: #183152;
     content: attr(data-legend);
     position: relative;
     top: 1.4em;
@@ -331,7 +368,8 @@ body {
 .padding_bottom_xl {
     padding-bottom: 3em;
 }
-.padding_top_md{
+
+.padding_top_md {
     padding-top: 1em;
 }
 /*----------------------------link-------------------------------*/
@@ -362,5 +400,15 @@ a:focus {
 }
 .navigation.nav__utility {
     text-align: right;
+
     width: 100%;
+}
+/*--------------------------table--------------------------------*/
+
+td:first-child {
+    text-align: left;
+    width: 11em;
+}
+td {
+    border-right: 3px solid #fff;
 }
