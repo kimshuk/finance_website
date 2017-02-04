@@ -12,7 +12,7 @@ body {
     position: fixed;
     z-index: 11;
     width: 100vw;
-    box-shadow: 0px 5px 18px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 11px 4px rgba(0, 0, 0, 0.35);
     height: 3em;
 }
 .section--navigation {
