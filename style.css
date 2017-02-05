@@ -26,7 +26,7 @@ body {
 }
 
 .dark-blue {
-    color: #183152;
+    color: #2e62a0;
 }
 /*-------------------------Nav--------------------------------*/
 .nav-wrapper {
@@ -34,7 +34,7 @@ body {
     z-index: 9999;
     width: 100vw;
     box-shadow: 0px 2px 11px 4px rgba(0, 0, 0, 0.35);
-    height: 3em;
+    height: 4em;
 }
 .section--navigation {
     width: 100%;
@@ -48,18 +48,29 @@ body {
 .nav__item__img {
     height: 3em;
 }
-
+.nav__item a{
+    color: #2e62a0;
+}
 .nav__main {
     background-color: white;
     color: black;
 }
 .nav__container__row{
-    height: 3em;
+    height: 4em;
 }
 .nav__item {
     display: inline-block;
     padding: 0.2em 1em;
     position: relative;
+    letter-spacing: 1px;
+    margin: 0 0 0 50px;
+    font-weight: bold;
+}
+.margin_zero{
+    margin: 0;
+    height: 100%;
+    background: gray;
+}
 }
 .nav__item a{
     font-size: 12px;
@@ -185,11 +196,12 @@ body {
 .statusBar .step {
     border: 1px solid white;
     border-radius: 5px;
+    z-index: 10;
 }
 .statusBar .filled {
-    border: 1px solid #337ab7;
+    border: 1px solid #2e62a0;
     border-radius: 5px;
-    background-color: #2e6da4;
+    background-color: #2e62a0;
 }
 .form--div {
     margin: 1em 0;
@@ -265,6 +277,14 @@ body {
     padding: 9px 6px;
     border: 0;
 }
+.btn-primary{
+    background-color: #71a354;
+    border: 1px solid #71a354;
+}
+.btn-primary:hover{
+    background-color: #449d44;
+    border: 1px solid #449d44;
+}
 /*
 #annualSales{
     border-radius: 0 4px 4px 0;
@@ -279,7 +299,7 @@ body {
 }
 
 .info_title {
-    color: #183152;
+    color: #2e62a0;
     font-size: 40px;
     font-size: 3.1em;
     padding-top: 0.6em;
@@ -307,7 +327,7 @@ body {
     font-size: 18px;
     font-size: 1.2em;
     display: inline-block;
-    background-color: #183152;
+    background-color: #2e62a0;
     content: attr(data-legend);
     position: relative;
     top: 1.4em;
@@ -382,10 +402,13 @@ a:focus {
     text-align: center;
 }
 .company_info_wrapper{
+/*
     background-image: url(assets/mortgage-calculator.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+*/
+    background-color: #f2f2f2;
 }
 .info_content_img svg{
     height: 30px;
@@ -396,7 +419,7 @@ a:focus {
     float: left;
 }
 .footer__item{
-    color: #337ab7;
+    color: #2e62a0;
 }
 .navigation.nav__utility {
     text-align: right;
@@ -411,4 +434,12 @@ td:first-child {
 }
 td {
     border-right: 3px solid #fff;
+}
+/*-----------------------------Modal-------------------------------*/
+.bold_and_space{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.margin_30{
+    margin-bottom: 30px;
 }
