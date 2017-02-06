@@ -116,7 +116,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 550px;
-    background: url('assets/slider-img-3-blur.jpg') center center / cover no-repeat;
+    background: url(assets/slider-img-3-blur.jpg) center center / cover no-repeat;
 }
 
 .inner_carouselImg-one,
@@ -131,19 +131,19 @@ body {
 }
 
 .inner_carouselImg-one {
-    background: url('assets/banner1.jpg') center center / cover no-repeat;
+    background: url(assets/banner1.jpg) center center / cover no-repeat;
 }
 
 .inner_carouselImg-two {
-    background: url('assets/banner2.jpg') center center / cover no-repeat;
+    background: url(assets/banner2.jpg) center center / cover no-repeat;
 }
 
 .inner_carouselImg-three {
-    background: url('assets/banner3.jpg') center center / cover no-repeat;
+    background: url(assets/banner3.jpg) center center / cover no-repeat;
 }
 
 .inner_carouselImg-four {
-    background: url('assets/banner5.jpg') center center / cover no-repeat;
+    background: url(assets/banner5.jpg) center center / cover no-repeat;
 }
 
 .inner_carouselText {
