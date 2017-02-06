@@ -1,0 +1,2 @@
+[04-Feb-2017 02:45:34 America/Chicago] PHP Warning:  require_once(email_config.php): failed to open stream: No such file or directory in /home3/danielchoi/public_html/webdev/mail_handler.php on line 2
+[04-Feb-2017 02:45:34 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'email_config.php' (include_path='.:/opt/php56/lib/php') in /home3/danielchoi/public_html/webdev/mail_handler.php on line 2

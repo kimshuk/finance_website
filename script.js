@@ -197,6 +197,7 @@ function validateFirstFormSet() {
     } else {
         console.log('forms all clear', checkForms);
         collectInputData(firstFormSetId);
+        collectInputData(email);
         //disableInput(firstFormSetId);
         addOrRemoveClass('enterDiv', 'add', 'hidden');
         addOrRemoveClass('second-set', 'remove', 'hidden');
@@ -229,6 +230,7 @@ function validateSecondFormSet() {
         console.log('forms all clear', checkForms);
         collectInputData(firstFormSetId);
         collectInputData(secondFormSetId);
+        collectInputData(email);
         //disableInput(secondFormSetId);
         addOrRemoveClass('step2', 'add', 'filled');
         addOrRemoveClass('submitDiv', 'add', 'hidden');
@@ -259,9 +261,9 @@ function createTableForEmail() {
 
 
 function sendMail(body) {
-    console.log(formInputData.fName + " " + formInputData.lName);
-    console.log(formInputData.email);
-    console.log(body);
+    console.log('name',formInputData.fName + " " + formInputData.lName);
+    console.log('forminputdata',formInputData.email);
+    console.log('body',body);
     disableInput(firstFormSetId);
     disableInput(secondFormSetId);
     $.ajax({
