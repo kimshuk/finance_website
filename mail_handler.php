@@ -1,6 +1,8 @@
 <?php
 require_once('email_config.php');
 require('phpmailer/PHPMailer/PHPMailerAutoload.php');
+print_r(EMAIL_USER);
+
 $mail = new PHPMailer;
 $mail->SMTPDebug = false;//3;                                 // Enable verbose debug output
 
