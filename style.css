@@ -163,12 +163,14 @@ body {
     color: white;
     font-size: 3em;
     margin: 5% 0 2% 0;
+    text-shadow: 2px 2px black;
 }
 .captionDescription {
     color: white;
     font-size: 1.2em;
     font-weight: 100;
     position: relative;
+    text-shadow: 2px 1px black;
 }
 .carousel-control {
     height: 100%;
@@ -474,4 +476,20 @@ td {
 }
 .margin_30 {
     margin-bottom: 30px;
+}
+
+@media (max-width: 766px) {
+    .hide__xs{
+        display: none;
+    }
+    .nav__item.margin_zero{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .carousel-control{
+        display: none;
+    }
+    .captionText{
+        margin-top: 3em;
+    }
 }

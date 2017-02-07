@@ -38,14 +38,6 @@ jQuery(function ($) {
             }
         }
     });
-//    $('#state').mask("Z", {
-//        'translation': {
-//            Z: {
-//                pattern: /[a-zA-Z*]/,
-//                recursive: true
-//            }
-//        }
-//    });
 });
 
 function applyClick() {
