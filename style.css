@@ -86,7 +86,7 @@ body {
 .margin_zero {
     margin: 0;
     height: 100%;
-/*    background: gray;*/
+    /*    background: gray;*/
 }
 
 
@@ -478,25 +478,56 @@ td {
     margin-bottom: 30px;
 }
 
+/*---------------------------Mobile Query---------------------------*/
 @media (max-width: 766px) {
-    .hide__xs{
+    .hide__xs {
         display: none;
     }
-    .nav__item.margin_zero{
+    
+    .nav__item.margin_zero {
         left: 50%;
         transform: translateX(-50%);
     }
-    .carousel-control{
+    
+    .carousel-control {
         display: none;
     }
-    .captionText{
+    
+    .captionText {
         margin-top: 3em;
     }
-    .right__padding, .left__padding{
+    
+    .right__padding,
+    .left__padding {
         padding: 0;
         padding-left: 15px;
     }
-    .float__right{
+    
+    .float__right {
         float: left;
+    }
+    
+    th:last-child,
+    td:last-child,
+    .text-center,
+    .mobile-hide,
+    .bold_and_space,
+    .margin_30 {
+        display: none;
+    }
+    
+    table {
+        font-size: 1em;
+        position: relative;
+        top: -25px;
+    }
+    
+    td:first-child {
+        width: inherit;
+    }
+    
+    .remodal.wrapper-size {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
