@@ -41,7 +41,7 @@ body {
     z-index: 9999;
     width: 100vw;
     box-shadow: 0px 2px 11px 4px rgba(0, 0, 0, 0.35);
-    height: 4em;
+    height: 6em;
 }
 
 .section--navigation {
@@ -56,7 +56,8 @@ body {
 }
 
 .nav__item__img {
-    height: 3em;
+    height: 100%;
+    padding: 14px 5px;
 }
 
 .nav__item a {
@@ -69,7 +70,7 @@ body {
 }
 
 .nav__container__row {
-    height: 4em;
+    height: 6em;
 }
 
 .nav__item {
@@ -85,7 +86,7 @@ body {
 .margin_zero {
     margin: 0;
     height: 100%;
-    background: gray;
+/*    background: gray;*/
 }
 
 
@@ -162,12 +163,14 @@ body {
     color: white;
     font-size: 3em;
     margin: 5% 0 2% 0;
+    text-shadow: 2px 2px black;
 }
 .captionDescription {
     color: white;
     font-size: 1.2em;
     font-weight: 100;
     position: relative;
+    text-shadow: 2px 1px black;
 }
 .carousel-control {
     height: 100%;
@@ -473,4 +476,20 @@ td {
 }
 .margin_30 {
     margin-bottom: 30px;
+}
+
+@media (max-width: 766px) {
+    .hide__xs{
+        display: none;
+    }
+    .nav__item.margin_zero{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .carousel-control{
+        display: none;
+    }
+    .captionText{
+        margin-top: 3em;
+    }
 }
