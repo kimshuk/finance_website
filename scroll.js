@@ -1,4 +1,4 @@
-var offsetHeight = 55;
+var offsetHeight = 82.5;
 
 $(document).ready(function () {
     // Reset scroll
