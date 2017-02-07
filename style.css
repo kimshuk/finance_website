@@ -492,4 +492,11 @@ td {
     .captionText{
         margin-top: 3em;
     }
+    .right__padding, .left__padding{
+        padding: 0;
+        padding-left: 15px;
+    }
+    .float__right{
+        float: left;
+    }
 }
