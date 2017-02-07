@@ -1,50 +1,6 @@
 $(document).ready(function () {
     applyClick();
 });
-//apply click handler to the 'next' button
-//when next button clicks
-//see if any form is missing information or form input is incorrect
-//if yes, mark error, return
-//else
-//remove handler
-//fill step2 status bar
-//save 1st set of inputs, 
-//disable 1st input set
-//unhide 2nd set
-//handler to the second set next button
-//when second next button clicks
-//see if any form is missing information or form input is incorrect
-//if yes, mark error, return
-//else
-//save 2nd set of inputs, 
-//disable 2nd input set
-
-//show review page
-//if confirm clicked
-//send email
-//stringify collected obj form data and make it body
-//use name email and body and call ajax
-//show confirmation
-//either failed or successful
-//reset the forms
-//else
-//allow edit which ever edit button clicked - edit img on the form
-//once changed and confirm clicked,
-//validate the form
-//if okay,
-//send email
-//stringify collected obj form data and make it body
-//use name email and body and call ajax
-//show confirmation
-//either failed or successful
-//show confirmation
-//reset the forms
-//else
-//show error
-//return
-
-
-
 
 var firstFormSetId = ['fName', 'lName', 'bizName', 'bizCategory', 'bizPhone', 'cellPhone'];
 var secondFormSetId = ['timeInBiz', 'desiredAmt', 'annualSales', 'bizAddress', 'city', 'state', 'zipCode'];
@@ -82,14 +38,14 @@ jQuery(function ($) {
             }
         }
     });
-    $('#state').mask("Z", {
-        'translation': {
-            Z: {
-                pattern: /[a-zA-Z*]/,
-                recursive: true
-            }
-        }
-    });
+//    $('#state').mask("Z", {
+//        'translation': {
+//            Z: {
+//                pattern: /[a-zA-Z*]/,
+//                recursive: true
+//            }
+//        }
+//    });
 });
 
 function applyClick() {
