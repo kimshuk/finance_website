@@ -33,7 +33,7 @@ jQuery(function ($) {
     $('#city').mask("Z", {
         'translation': {
             Z: {
-                pattern: /[a-zA-Z*]/,
+                pattern: /^[a-zA-Z\s]*$/,
                 recursive: true
             }
         }
@@ -91,7 +91,7 @@ function collectInputData(idArr) {
     idArr.forEach(function (v) {
         formInputData[v] = $('#' + v).val();
     })
-    console.log('form input data inserted into the object', formInputData);
+//    console.log('form input data inserted into the object', formInputData);
 }
 
 //disable input form
@@ -135,15 +135,15 @@ function validateFirstFormSet() {
 
     if (checkForms || emailCheck) {
         if (checkForms) {
-            console.log('incorrect forms', checkForms);
+//            console.log('incorrect forms', checkForms);
             createRequiredFormWarning(checkForms);
         }
         if (emailCheck) {
-            console.log('incorrect forms', emailCheck);
+//            console.log('incorrect forms', emailCheck);
             createRequiredFormWarning(emailCheck);
         }
     } else {
-        console.log('forms all clear', checkForms);
+//        console.log('forms all clear', checkForms);
         collectInputData(firstFormSetId);
         collectInputData(email);
         //disableInput(firstFormSetId);
@@ -163,19 +163,19 @@ function validateSecondFormSet() {
     var emailCheck = isEmail($('#' + email).val());
     if (checkForms || checkForms2 || emailCheck) {
         if (checkForms) {
-            console.log('incorrect forms', checkForms);
+//            console.log('incorrect forms', checkForms);
             createRequiredFormWarning(checkForms);
         }
         if (checkForms2) {
-            console.log('incorrect forms2', checkForms2);
+//            console.log('incorrect forms2', checkForms2);
             createRequiredFormWarning(checkForms2);
         }
         if (emailCheck) {
-            console.log('incorrect forms', emailCheck);
+//            console.log('incorrect forms', emailCheck);
             createRequiredFormWarning(emailCheck);
         }
     } else {
-        console.log('forms all clear', checkForms);
+//        console.log('forms all clear', checkForms);
         collectInputData(firstFormSetId);
         collectInputData(secondFormSetId);
         collectInputData(email);
@@ -209,9 +209,9 @@ function createTableForEmail() {
 
 
 function sendMail(body) {
-    console.log('name',formInputData.fName + " " + formInputData.lName);
-    console.log('forminputdata',formInputData.email);
-    console.log('body',body);
+//    console.log('name',formInputData.fName + " " + formInputData.lName);
+//    console.log('forminputdata',formInputData.email);
+//    console.log('body',body);
     disableInput(firstFormSetId);
     disableInput(secondFormSetId);
     $.ajax({
@@ -229,16 +229,16 @@ function sendMail(body) {
                 addOrRemoveClass('loading-set', 'add', 'hidden');
                 addOrRemoveClass('third-set', 'remove', 'hidden');
                 addOrRemoveClass('complete', 'add', 'filled');
-                console.log(stringResponse);
+//                console.log(stringResponse);
             } else {
                 addOrRemoveClass('loading-set', 'add', 'hidden');
                 addOrRemoveClass('third-set-error', 'remove', 'hidden');
                 addOrRemoveClass('complete', 'add', 'filled');
-                console.log(stringResponse);
+//                console.log(stringResponse);
             }
         },
         error: function (response) {
-            console.log(response, 'your ajax failed');
+//            console.log(response, 'your ajax failed');
             addOrRemoveClass('loading-set', 'add', 'hidden');
             addOrRemoveClass('third-set-error', 'remove', 'hidden');
             addOrRemoveClass('complete', 'add', 'filled');
